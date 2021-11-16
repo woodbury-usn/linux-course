@@ -1,0 +1,17 @@
+Challenge #2
+
+1.    Move into the current user’s home directory using the cd command and an absolute path.
+
+2.    List the contents of the current directory using the ls command and a relative path.
+
+3.    List the contents of /home using the ls command and an absolute path.
+
+4.    List the contents of /home using the ls command and a relative path.
+
+5.    List the contents of /etc using the ls command and an absolute path.
+
+6.    List the contents of /etc using the ls command and a relative path.
+
+7.    Display the contents of /var/log/dmesg using the cat command and an absolute path.
+
+8.    Display the contents of /var/log/dmesg using the cat command and a relative path.
