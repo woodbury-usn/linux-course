@@ -1,0 +1,5 @@
+Challenge #14
+
+1.    Display the last 12 lines of /var/log/auth.log in real-time.
+
+2.    Become root in another terminal and notice how the display is automatically updated.

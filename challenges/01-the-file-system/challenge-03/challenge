@@ -1,0 +1,11 @@
+Challenge #3
+
+1.    Move into the root directory (/) using the cd command and an absolute path.
+
+2.    Display the contents of /var/log/boot.log using the cat command and a relative path.
+
+3.    Run the previous command as root.
+
+4.    Move to /var/log directory using an absolute path.
+
+5.    Display the contents of the Desktop directory using both an absolute and relative path.

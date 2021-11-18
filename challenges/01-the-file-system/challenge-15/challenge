@@ -1,0 +1,5 @@
+Challenge #15
+
+1.    Display the contents of the user’s home directory repeatedly every 2 seconds.
+
+2.    Create a new file in the user's home directory and notice the differences between the refreshes.

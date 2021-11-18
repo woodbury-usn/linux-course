@@ -1,0 +1,1101 @@
+Script started on 2021-11-18 17:05:31+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="47"]
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ man ls
+[?1049h[22;0;0t[?1h=LS(1)                                        User Commands                                       LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List  information  about the FILEs (the current directory by default).  Sort entries alphabeti‐[m
+       cally if none of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[m
+       Mandatory arguments to long options are mandatory for short options too.[m
+[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[m
+       [1m-A[0m, [1m--almost-all[0m[m
+              do not list implied . and ..[m
+[m
+       [1m--author[0m[m
+              with [1m-l[0m, print the author of each file[m
+[m
+       [1m-b[0m, [1m--escape[0m[m
+              print C-style escapes for nongraphic characters[m
+[m
+       [1m--block-size[0m=[4mSIZE[24m[m
+              with [1m-l[0m, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format[m
+              below[m
+[m
+       [1m-B[0m, [1m--ignore-backups[0m[m
+              do not list implied entries ending with ~[m
+[m
+       [1m-c[0m     with  [1m-lt[0m:  sort  by, and show, ctime (time of last modification of file status informa‐[m
+              tion); with [1m-l[0m: show ctime and sort by name; otherwise: sort by ctime, newest first[m
+[m
+       [1m-C[0m     list entries by columns[m
+[m
+       [1m--color[0m[=[4mWHEN[24m][m
+              colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more[m
+              info below[m
+[m
+       [1m-d[0m, [1m--directory[0m[m
+              list directories themselves, not their contents[m
+[m
+       [1m-D[0m, [1m--dired[0m[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K/[K--[Kdd[K[1;1HLS(1)                                        User Commands                                       LS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ls - list directory contents[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       List  information  about the FILEs (the current directory by default).  Sort entries alphabeti‐[m
+[11;1H       cally if none of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[12;1H[m
+[13;1H       Mandatory arguments to long options are mandatory for short options too.[m
+[14;1H[m
+[15;1H       [1m-a[0m, [1m--all[0m[m
+[16;1H              do not ignore entries starting with .[m
+[17;1H[m
+[18;1H       [1m-A[0m, [1m--almost-all[0m[m
+[19;1H              do not list implied . and ..[m
+[20;1H[m
+[21;1H       [1m--author[0m[m
+[22;1H              with [1m-l[0m, print the author of each file[m
+[23;1H[m
+[24;1H       [1m-b[0m, [1m--escape[0m[m
+[25;1H              print C-style escapes for nongraphic characters[m
+[26;1H[m
+[27;1H       [1m--block-size[0m=[4mSIZE[24m[m
+[28;1H              with [1m-l[0m, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format[m
+[29;1H              below[m
+[30;1H[m
+[31;1H       [1m-B[0m, [1m--ignore-backups[0m[m
+[32;1H              do not list implied entries ending with ~[m
+[33;1H[m
+[34;1H       [1m-c[0m     with  [1m-lt[0m:  sort  by, and show, ctime (time of last modification of file status informa‐[m
+[35;1H              tion); with [1m-l[0m: show ctime and sort by name; otherwise: sort by ctime, newest first[m
+[36;1H[m
+[37;1H       [1m-C[0m     list entries by columns[m
+[38;1H[m
+[39;1H       [1m--color[0m[=[4mWHEN[24m][m
+[40;1H              colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more[m
+[41;1H              info below[m
+[42;1H[m
+[43;1H       [1m-d[0m, [1m--directory[0m[m
+[44;1H              list directories themselves, not their contents[m
+[45;1H[m
+[46;1H       [1m-D[0m, [1m--dired[0m[m
+[47;1H[1;1HLS(1)                                        User Commands                                       LS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ls - list directory contents[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       List  information  about the FILEs (the current directory by default).  Sort entries alphabeti‐[m
+[11;1H       cally if none of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[12;1H[m
+[13;1H       Mandatory arguments to long options are mandatory for short options too.[m
+[14;1H[m
+[15;1H       [1m-a[0m, [1m--all[0m[m
+[16;1H              do not ignore entries starting with .[m
+[17;1H[m
+[18;1H       [1m-A[0m, [1m--almost-all[0m[m
+[19;1H              do not list implied . and ..[m
+[20;1H[m
+[21;1H       [1m--author[0m[m
+[22;1H              with [1m-l[0m, print the author of each file[m
+[23;1H[m
+[24;1H       [1m-b[0m, [1m--escape[0m[m
+[25;1H              print C-style escapes for nongraphic characters[m
+[26;1H[m
+[27;1H       [1m--block-size[0m=[4mSIZE[24m[m
+[28;1H              with [1m-l[0m, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format[m
+[29;1H              below[m
+[30;1H[m
+[31;1H       [1m-B[0m, [1m--ignore-backups[0m[m
+[32;1H              do not list implied entries ending with ~[m
+[33;1H[m
+[34;1H       [1m-c[0m     with  [1m-lt[0m:  sort  by, and show, ctime (time of last modification of file status informa‐[m
+[35;1H              tion); with [1m-l[0m: show ctime and sort by name; otherwise: sort by ctime, newest first[m
+[36;1H[m
+[37;1H       [1m-C[0m     list entries by columns[m
+[38;1H[m
+[39;1H       [1m--color[0m[=[4mWHEN[24m][m
+[40;1H              colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more[m
+[41;1H              info below[m
+[42;1H[m
+[43;1H       [1m[7m-d[27m[0m, [1m-[0m[1m[7m-d[27m[0m[1mirectory[0m[m
+[44;1H              list directories themselves, not their contents[m
+[45;1H[m
+[46;1H       [1m[7m-D[27m[0m, [1m-[0m[1m[7m-d[27m[0m[1mired[0m[m
+[47;1H              generate output designed for Emacs' dired mode[m
+[m
+       [1m-f[0m     do not sort, enable [1m-aU[0m, disable [1m-ls[0m [1m--color[0m[m
+[m
+       [1m-F[0m, [1m--classify[0m[m
+              append indicator (one of */=>@|) to entries[m
+[m
+       [1m--file-type[0m[m
+              likewise, except do not append '*'[m
+[m
+       [1m--format[0m=[4mWORD[24m[m
+              across [1m-x[0m, commas [1m-m[0m, horizontal [1m-x[0m, long [1m-l[0m, single-column [1m-1[0m, verbose [1m-l[0m, vertical [1m-C[0m[m
+[m
+       [1m--full-time[0m[m
+              like [1m-l[0m [1m--time-style[0m=[4mfull-iso[24m[m
+[m
+       [1m-g[0m     like [1m-l[0m, but do not list owner[m
+[m
+       [1m--group[0m[1m[7m-d[27m[0m[1mirectories-first[0m[m
+              group directories before files;[m
+[m
+              can be augmented with a [1m--sort[0m option, but any use of [1m--sort[0m=[4mnone[24m ([1m-U[0m) disables grouping[m
+[m
+       [1m-G[0m, [1m--no-group[0m[m
+              in a long listing, don't print group names[m
+[m
+       [1m-h[0m, [1m--human-readable[0m[m
+              with [1m-l[0m and [1m-s[0m, print sizes like 1K 234M 2G etc.[m
+[m
+       [1m--si[0m   likewise, but use powers of 1000 not 1024[m
+[m
+       [1m-H[0m, [1m-[0m[1m[7m-d[27m[0m[1mereference-command-line[0m[m
+              follow symbolic links listed on the command line[m
+[m
+       [1m-[0m[1m[7m-d[27m[0m[1mereference-command-line-symlink-to[0m[1m[7m-d[27m[0m[1mir[0m[m
+              follow each command line symbolic link[m
+[m
+              that points to a directory[m
+[m
+       [1m--hide[0m=[4mPATTERN[24m[m
+              do not list implied entries matching shell PATTERN (overridden by [1m-a[0m or [1m-A[0m)[m
+[m
+[7m Manual page ls(1) line 43 (press h for help or q to quit)[27m[K[K[7m Manual page ls(1) line 43 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ man ls
+[?1049h[22;0;0t[?1h=LS(1)                                        User Commands                                       LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List  information  about the FILEs (the current directory by default).  Sort entries alphabeti‐[m
+       cally if none of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[m
+       Mandatory arguments to long options are mandatory for short options too.[m
+[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[m
+       [1m-A[0m, [1m--almost-all[0m[m
+              do not list implied . and ..[m
+[m
+       [1m--author[0m[m
+              with [1m-l[0m, print the author of each file[m
+[m
+       [1m-b[0m, [1m--escape[0m[m
+              print C-style escapes for nongraphic characters[m
+[m
+       [1m--block-size[0m=[4mSIZE[24m[m
+              with [1m-l[0m, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format[m
+              below[m
+[m
+       [1m-B[0m, [1m--ignore-backups[0m[m
+              do not list implied entries ending with ~[m
+[m
+       [1m-c[0m     with  [1m-lt[0m:  sort  by, and show, ctime (time of last modification of file status informa‐[m
+              tion); with [1m-l[0m: show ctime and sort by name; otherwise: sort by ctime, newest first[m
+[m
+       [1m-C[0m     list entries by columns[m
+[m
+       [1m--color[0m[=[4mWHEN[24m][m
+              colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more[m
+              info below[m
+[m
+       [1m-d[0m, [1m--directory[0m[m
+              list directories themselves, not their contents[m
+[m
+       [1m-D[0m, [1m--dired[0m[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K/[Kdd[K[1;1HLS(1)                                        User Commands                                       LS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ls - list directory contents[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       List  information  about the FILEs (the current directory by default).  Sort entries alphabeti‐[m
+[11;1H       cally if none of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[12;1H[m
+[13;1H       Mandatory arguments to long options are mandatory for short options too.[m
+[14;1H[m
+[15;1H       [1m-a[0m, [1m--all[0m[m
+[16;1H              do not ignore entries starting with .[m
+[17;1H[m
+[18;1H       [1m-A[0m, [1m--almost-all[0m[m
+[19;1H              do not list implied . and ..[m
+[20;1H[m
+[21;1H       [1m--author[0m[m
+[22;1H              with [1m-l[0m, print the author of each file[m
+[23;1H[m
+[24;1H       [1m-b[0m, [1m--escape[0m[m
+[25;1H              print C-style escapes for nongraphic characters[m
+[26;1H[m
+[27;1H       [1m--block-size[0m=[4mSIZE[24m[m
+[28;1H              with [1m-l[0m, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format[m
+[29;1H              below[m
+[30;1H[m
+[31;1H       [1m-B[0m, [1m--ignore-backups[0m[m
+[32;1H              do not list implied entries ending with ~[m
+[33;1H[m
+[34;1H       [1m-c[0m     with  [1m-lt[0m:  sort  by, and show, ctime (time of last modification of file status informa‐[m
+[35;1H              tion); with [1m-l[0m: show ctime and sort by name; otherwise: sort by ctime, newest first[m
+[36;1H[m
+[37;1H       [1m-C[0m     list entries by columns[m
+[38;1H[m
+[39;1H       [1m--color[0m[=[4mWHEN[24m][m
+[40;1H              colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more[m
+[41;1H              info below[m
+[42;1H[m
+[43;1H       [1m-d[0m, [1m--directory[0m[m
+[44;1H              list directories themselves, not their contents[m
+[45;1H[m
+[46;1H       [1m-D[0m, [1m--dired[0m[m
+[47;1H[1;1HLS(1)                                        User Comman[7md[27ms                                       LS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ls - list [7md[27mirectory contents[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[8;1H[m
+[9;1H[1m[7mD[27m[0m[1mESCRIPTION[0m[m
+[10;1H       List  information  about the FILEs (the current [7md[27mirectory by [7md[27mefault).  Sort entries alphabeti‐[m
+[11;1H       cally if none of [1m-cftuvSUX[0m nor [1m--sort[0m is specifie[7md[27m.[m
+[12;1H[m
+[13;1H       Man[7md[27matory arguments to long options are man[7md[27matory for short options too.[m
+[14;1H[m
+[15;1H       [1m-a[0m, [1m--all[0m[m
+[16;1H              [7md[27mo not ignore entries starting with .[m
+[17;1H[m
+[18;1H       [1m-A[0m, [1m--almost-all[0m[m
+[19;1H              [7md[27mo not list implie[7md[27m . an[7md[27m ..[m
+[20;1H[m
+[21;1H       [1m--author[0m[m
+[22;1H              with [1m-l[0m, print the author of each file[m
+[23;1H[m
+[24;1H       [1m-b[0m, [1m--escape[0m[m
+[25;1H              print C-style escapes for nongraphic characters[m
+[26;1H[m
+[27;1H       [1m--block-size[0m=[4mSIZE[24m[m
+[28;1H              with [1m-l[0m, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format[m
+[29;1H              below[m
+[30;1H[m
+[31;1H       [1m-B[0m, [1m--ignore-backups[0m[m
+[32;1H              [7md[27mo not list implie[7md[27m entries en[7md[27ming with ~[m
+[33;1H[m
+[34;1H       [1m-c[0m     with  [1m-lt[0m:  sort  by, an[7md[27m show, ctime (time of last mo[7md[27mification of file status informa‐[m
+[35;1H              tion); with [1m-l[0m: show ctime an[7md[27m sort by name; otherwise: sort by ctime, newest first[m
+[36;1H[m
+[37;1H       [1m-C[0m     list entries by columns[m
+[38;1H[m
+[39;1H       [1m--color[0m[=[4mWHEN[24m][m
+[40;1H              colorize the output; WHEN can be 'always' ([7md[27mefault if omitte[7md[27m), 'auto', or 'never'; more[m
+[41;1H              info below[m
+[42;1H[m
+[43;1H       [1m-[0m[1m[7md[27m[0m, [1m--[0m[1m[7md[27m[0m[1mirectory[0m[m
+[44;1H              list [7md[27mirectories themselves, not their contents[m
+[45;1H[m
+[46;1H       [1m-[0m[1m[7mD[27m[0m, [1m--[0m[1m[7md[27m[0m[1mire[0m[1m[7md[27m[0m[m
+[47;1H[K[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K/[K--[Kdd[K[1;1HLS(1)                                        User Commands                                       LS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ls - list directory contents[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       List  information  about the FILEs (the current directory by default).  Sort entries alphabeti‐[m
+[11;1H       cally if none of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[12;1H[m
+[13;1H       Mandatory arguments to long options are mandatory for short options too.[m
+[14;1H[m
+[15;1H       [1m-a[0m, [1m--all[0m[m
+[16;1H              do not ignore entries starting with .[m
+[17;1H[m
+[18;1H       [1m-A[0m, [1m--almost-all[0m[m
+[19;1H              do not list implied . and ..[m
+[20;1H[m
+[21;1H       [1m--author[0m[m
+[22;1H              with [1m-l[0m, print the author of each file[m
+[23;1H[m
+[24;1H       [1m-b[0m, [1m--escape[0m[m
+[25;1H              print C-style escapes for nongraphic characters[m
+[26;1H[m
+[27;1H       [1m--block-size[0m=[4mSIZE[24m[m
+[28;1H              with [1m-l[0m, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format[m
+[29;1H              below[m
+[30;1H[m
+[31;1H       [1m-B[0m, [1m--ignore-backups[0m[m
+[32;1H              do not list implied entries ending with ~[m
+[33;1H[m
+[34;1H       [1m-c[0m     with  [1m-lt[0m:  sort  by, and show, ctime (time of last modification of file status informa‐[m
+[35;1H              tion); with [1m-l[0m: show ctime and sort by name; otherwise: sort by ctime, newest first[m
+[36;1H[m
+[37;1H       [1m-C[0m     list entries by columns[m
+[38;1H[m
+[39;1H       [1m--color[0m[=[4mWHEN[24m][m
+[40;1H              colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more[m
+[41;1H              info below[m
+[42;1H[m
+[43;1H       [1m-d[0m, [1m--directory[0m[m
+[44;1H              list directories themselves, not their contents[m
+[45;1H[m
+[46;1H       [1m-D[0m, [1m--dired[0m[m
+[47;1H[1;1HLS(1)                                        User Commands                                       LS(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       ls - list directory contents[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[8;1H[m
+[9;1H[1mDESCRIPTION[0m[m
+[10;1H       List  information  about the FILEs (the current directory by default).  Sort entries alphabeti‐[m
+[11;1H       cally if none of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[12;1H[m
+[13;1H       Mandatory arguments to long options are mandatory for short options too.[m
+[14;1H[m
+[15;1H       [1m-a[0m, [1m--all[0m[m
+[16;1H              do not ignore entries starting with .[m
+[17;1H[m
+[18;1H       [1m-A[0m, [1m--almost-all[0m[m
+[19;1H              do not list implied . and ..[m
+[20;1H[m
+[21;1H       [1m--author[0m[m
+[22;1H              with [1m-l[0m, print the author of each file[m
+[23;1H[m
+[24;1H       [1m-b[0m, [1m--escape[0m[m
+[25;1H              print C-style escapes for nongraphic characters[m
+[26;1H[m
+[27;1H       [1m--block-size[0m=[4mSIZE[24m[m
+[28;1H              with [1m-l[0m, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format[m
+[29;1H              below[m
+[30;1H[m
+[31;1H       [1m-B[0m, [1m--ignore-backups[0m[m
+[32;1H              do not list implied entries ending with ~[m
+[33;1H[m
+[34;1H       [1m-c[0m     with  [1m-lt[0m:  sort  by, and show, ctime (time of last modification of file status informa‐[m
+[35;1H              tion); with [1m-l[0m: show ctime and sort by name; otherwise: sort by ctime, newest first[m
+[36;1H[m
+[37;1H       [1m-C[0m     list entries by columns[m
+[38;1H[m
+[39;1H       [1m--color[0m[=[4mWHEN[24m][m
+[40;1H              colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more[m
+[41;1H              info below[m
+[42;1H[m
+[43;1H       [1m[7m-d[27m[0m, [1m-[0m[1m[7m-d[27m[0m[1mirectory[0m[m
+[44;1H              list directories themselves, not their contents[m
+[45;1H[m
+[46;1H       [1m[7m-D[27m[0m, [1m-[0m[1m[7m-d[27m[0m[1mired[0m[m
+[47;1H              generate output designed for Emacs' dired mode[m
+[m
+       [1m-f[0m     do not sort, enable [1m-aU[0m, disable [1m-ls[0m [1m--color[0m[m
+[m
+       [1m-F[0m, [1m--classify[0m[m
+              append indicator (one of */=>@|) to entries[m
+[m
+       [1m--file-type[0m[m
+              likewise, except do not append '*'[m
+[m
+       [1m--format[0m=[4mWORD[24m[m
+              across [1m-x[0m, commas [1m-m[0m, horizontal [1m-x[0m, long [1m-l[0m, single-column [1m-1[0m, verbose [1m-l[0m, vertical [1m-C[0m[m
+[m
+       [1m--full-time[0m[m
+              like [1m-l[0m [1m--time-style[0m=[4mfull-iso[24m[m
+[m
+       [1m-g[0m     like [1m-l[0m, but do not list owner[m
+[m
+       [1m--group[0m[1m[7m-d[27m[0m[1mirectories-first[0m[m
+              group directories before files;[m
+[m
+              can be augmented with a [1m--sort[0m option, but any use of [1m--sort[0m=[4mnone[24m ([1m-U[0m) disables grouping[m
+[m
+       [1m-G[0m, [1m--no-group[0m[m
+              in a long listing, don't print group names[m
+[m
+       [1m-h[0m, [1m--human-readable[0m[m
+              with [1m-l[0m and [1m-s[0m, print sizes like 1K 234M 2G etc.[m
+[m
+       [1m--si[0m   likewise, but use powers of 1000 not 1024[m
+[m
+       [1m-H[0m, [1m-[0m[1m[7m-d[27m[0m[1mereference-command-line[0m[m
+              follow symbolic links listed on the command line[m
+[m
+       [1m-[0m[1m[7m-d[27m[0m[1mereference-command-line-symlink-to[0m[1m[7m-d[27m[0m[1mir[0m[m
+              follow each command line symbolic link[m
+[m
+              that points to a directory[m
+[m
+       [1m--hide[0m=[4mPATTERN[24m[m
+              do not list implied entries matching shell PATTERN (overridden by [1m-a[0m or [1m-A[0m)[m
+[m
+[7m Manual page ls(1) line 43 (press h for help or q to quit)[27m[K[K/[Kll[Koo[Knn[Kgg[K[1;1H       [1m-d[0m, [1m--directory[0m[m
+[2;1H              list directories themselves, not their contents[m
+[3;1H[m
+[4;1H       [1m-D[0m, [1m--dired[0m[m
+[5;1H              generate output designed for Emacs' dired mode[m
+[6;1H[m
+[7;1H       [1m-f[0m     do not sort, enable [1m-aU[0m, disable [1m-ls[0m [1m--color[0m[m
+[8;1H[m
+[9;1H       [1m-F[0m, [1m--classify[0m[m
+[10;1H              append indicator (one of */=>@|) to entries[m
+[11;1H[m
+[12;1H       [1m--file-type[0m[m
+[13;1H              likewise, except do not append '*'[m
+[14;1H[m
+[15;1H       [1m--format[0m=[4mWORD[24m[m
+[16;1H              across [1m-x[0m, commas [1m-m[0m, horizontal [1m-x[0m, long [1m-l[0m, single-column [1m-1[0m, verbose [1m-l[0m, vertical [1m-C[0m[m
+[17;1H[m
+[18;1H       [1m--full-time[0m[m
+[19;1H              like [1m-l[0m [1m--time-style[0m=[4mfull-iso[24m[m
+[20;1H[m
+[21;1H       [1m-g[0m     like [1m-l[0m, but do not list owner[m
+[22;1H[m
+[23;1H       [1m--group-directories-first[0m[m
+[24;1H              group directories before files;[m
+[25;1H[m
+[26;1H              can be augmented with a [1m--sort[0m option, but any use of [1m--sort[0m=[4mnone[24m ([1m-U[0m) disables grouping[m
+[27;1H[m
+[28;1H       [1m-G[0m, [1m--no-group[0m[m
+[29;1H              in a long listing, don't print group names[m
+[30;1H[m
+[31;1H       [1m-h[0m, [1m--human-readable[0m[m
+[32;1H              with [1m-l[0m and [1m-s[0m, print sizes like 1K 234M 2G etc.[m
+[33;1H[m
+[34;1H       [1m--si[0m   likewise, but use powers of 1000 not 1024[m
+[35;1H[m
+[36;1H       [1m-H[0m, [1m--dereference-command-line[0m[m
+[37;1H              follow symbolic links listed on the command line[m
+[38;1H[m
+[39;1H       [1m--dereference-command-line-symlink-to-dir[0m[m
+[40;1H              follow each command line symbolic link[m
+[41;1H[m
+[42;1H              that points to a directory[m
+[43;1H[m
+[44;1H       [1m--hide[0m=[4mPATTERN[24m[m
+[45;1H              do not list implied entries matching shell PATTERN (overridden by [1m-a[0m or [1m-A[0m)[m
+[46;1H[m
+[47;1H[1;1H       [1m-d[0m, [1m--directory[0m[m
+[2;1H              list directories themselves, not their contents[m
+[3;1H[m
+[4;1H       [1m-D[0m, [1m--dired[0m[m
+[5;1H              generate output designed for Emacs' dired mode[m
+[6;1H[m
+[7;1H       [1m-f[0m     do not sort, enable [1m-aU[0m, disable [1m-ls[0m [1m--color[0m[m
+[8;1H[m
+[9;1H       [1m-F[0m, [1m--classify[0m[m
+[10;1H              append indicator (one of */=>@|) to entries[m
+[11;1H[m
+[12;1H       [1m--file-type[0m[m
+[13;1H              likewise, except do not append '*'[m
+[14;1H[m
+[15;1H       [1m--format[0m=[4mWORD[24m[m
+[16;1H              across [1m-x[0m, commas [1m-m[0m, horizontal [1m-x[0m, [7mlong[27m [1m-l[0m, single-column [1m-1[0m, verbose [1m-l[0m, vertical [1m-C[0m[m
+[17;1H[m
+[18;1H       [1m--full-time[0m[m
+[19;1H              like [1m-l[0m [1m--time-style[0m=[4mfull-iso[24m[m
+[20;1H[m
+[21;1H       [1m-g[0m     like [1m-l[0m, but do not list owner[m
+[22;1H[m
+[23;1H       [1m--group-directories-first[0m[m
+[24;1H              group directories before files;[m
+[25;1H[m
+[26;1H              can be augmented with a [1m--sort[0m option, but any use of [1m--sort[0m=[4mnone[24m ([1m-U[0m) disables grouping[m
+[27;1H[m
+[28;1H       [1m-G[0m, [1m--no-group[0m[m
+[29;1H              in a [7mlong[27m listing, don't print group names[m
+[30;1H[m
+[31;1H       [1m-h[0m, [1m--human-readable[0m[m
+[32;1H              with [1m-l[0m and [1m-s[0m, print sizes like 1K 234M 2G etc.[m
+[33;1H[m
+[34;1H       [1m--si[0m   likewise, but use powers of 1000 not 1024[m
+[35;1H[m
+[36;1H       [1m-H[0m, [1m--dereference-command-line[0m[m
+[37;1H              follow symbolic links listed on the command line[m
+[38;1H[m
+[39;1H       [1m--dereference-command-line-symlink-to-dir[0m[m
+[40;1H              follow each command line symbolic link[m
+[41;1H[m
+[42;1H              that points to a directory[m
+[43;1H[m
+[44;1H       [1m--hide[0m=[4mPATTERN[24m[m
+[45;1H              do not list implied entries matching shell PATTERN (overridden by [1m-a[0m or [1m-A[0m)[m
+[46;1H[m
+[47;1H       [1m--hyperlink[0m[=[4mWHEN[24m][m
+              hyperlink file names; WHEN can be 'always' (default if omitted), 'auto', or 'never'[m
+[m
+       [1m--indicator-style[0m=[4mWORD[24m[m
+              append  indicator  with style WORD to entry names: none (default), slash ([1m-p[0m), file-type[m
+              ([1m--file-type[0m), classify ([1m-F[0m)[m
+[m
+       [1m-i[0m, [1m--inode[0m[m
+              print the index number of each file[m
+[m
+       [1m-I[0m, [1m--ignore[0m=[4mPATTERN[24m[m
+              do not list implied entries matching shell PATTERN[m
+[m
+       [1m-k[0m, [1m--kibibytes[0m[m
+              default to 1024-byte blocks for disk usage; used only with [1m-s[0m and per directory totals[m
+[7m Manual page ls(1) line 58/227 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 59/227 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-l[0m     use a [7mlong[27m listing format[m
+[7m Manual page ls(1) line 60/227 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 61/227 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-L[0m, [1m--dereference[0m[m
+[7m Manual page ls(1) line 62/227 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              when showing file information for a symbolic link, show information  for  the  file  the[m
+[7m Manual page ls(1) line 63/227 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              link references rather than for the link itself[m
+[7m Manual page ls(1) line 64/227 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 65/227 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-m[0m     fill width with a comma separated list of entries[m
+[7m Manual page ls(1) line 66/227 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 67/227 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-n[0m, [1m--numeric-uid-gid[0m[m
+[7m Manual page ls(1) line 68/227 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              like [1m-l[0m, but list numeric user and group IDs[m
+[7m Manual page ls(1) line 69/227 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 70/227 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-N[0m, [1m--literal[0m[m
+[7m Manual page ls(1) line 71/227 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print entry names without quoting[m
+[7m Manual page ls(1) line 72/227 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 73/227 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-o[0m     like [1m-l[0m, but do not list group information[m
+[7m Manual page ls(1) line 74/227 51% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ ls -l /var/log/
+total 4972
+-rw-r--r--  1 root              root              38923 nov.  16 09:53 alternatives.log
+drwxr-xr-x  2 root              root               4096 nov.  16 09:53 [0m[01;34mapt[0m
+-rw-r-----  1 syslog            adm               39217 nov.  18 17:01 auth.log
+-rw-r-----  1 syslog            adm               52538 nov.  14 16:40 auth.log.1
+-rw-------  1 root              root               3011 nov.  18 16:57 boot.log
+-rw-------  1 root              root              27155 nov.  18 16:57 boot.log.1
+-rw-------  1 root              root               9954 nov.  16 09:40 boot.log.2
+-rw-------  1 root              root              19358 nov.  15 16:33 boot.log.3
+-rw-------  1 root              root              19272 nov.  14 16:40 boot.log.4
+-rw-------  1 root              root             114430 nov.  13 16:37 boot.log.5
+-rw-r--r--  1 root              root             104003 aug.  19 12:30 bootstrap.log
+-rw-rw----  1 root              utmp                  0 aug.  19 12:29 btmp
+drwxr-xr-x  2 root              root               4096 nov.  18 16:57 [01;34mcups[0m
+drwxr-xr-x  2 root              root               4096 aug.   4 03:00 [01;34mdist-upgrade[0m
+-rw-r--r--  1 root              adm               45757 nov.  18 16:57 dmesg
+-rw-r--r--  1 root              adm               45921 nov.  16 18:03 dmesg.0
+-rw-r--r--  1 root              adm               13708 nov.  16 17:13 [01;31mdmesg.1.gz[0m
+-rw-r--r--  1 root              adm               13737 nov.  16 09:40 [01;31mdmesg.2.gz[0m
+-rw-r--r--  1 root              adm               13689 nov.  15 16:33 [01;31mdmesg.3.gz[0m
+-rw-r--r--  1 root              adm               13683 nov.  14 16:45 [01;31mdmesg.4.gz[0m
+-rw-r--r--  1 root              root            1145341 nov.  16 09:53 dpkg.log
+-rw-r--r--  1 root              root              32032 nov.  16 09:47 faillog
+-rw-r--r--  1 root              root              10884 nov.   9 13:45 fontconfig.log
+drwx--x--x  2 root              gdm                4096 juli  12 11:44 [01;34mgdm3[0m
+-rw-r--r--  1 root              root               1300 nov.  18 16:57 gpu-manager.log
+drwxr-xr-x  3 root              root               4096 aug.  19 12:35 [01;34mhp[0m
+drwxrwxr-x  2 root              root               4096 nov.   9 13:47 [01;34minstaller[0m
+drwxr-sr-x+ 3 root              systemd-journal    4096 nov.   9 13:48 [01;34mjournal[0m
+-rw-r-----  1 syslog            adm              439647 nov.  18 16:58 kern.log
+-rw-r-----  1 syslog            adm             1025091 nov.  14 16:40 kern.log.1
+-rw-rw-r--  1 root              utmp             292292 nov.  16 09:47 lastlog
+drwxr-xr-x  2 root              root               4096 juli  19 21:26 [01;34mopenvpn[0m
+drwx------  2 root              root               4096 aug.  19 12:29 [01;34mprivate[0m
+drwx------  2 speech-dispatcher root               4096 jan.  19  2020 [01;34mspeech-dispatcher[0m
+-rw-r-----  1 syslog            adm              137280 nov.  18 17:06 syslog
+-rw-r-----  1 syslog            adm              841800 nov.  18 16:57 syslog.1
+-rw-r-----  1 syslog            adm               42064 nov.  16 09:40 [01;31msyslog.2.gz[0m
+-rw-r-----  1 syslog            adm               75426 nov.  15 16:33 [01;31msyslog.3.gz[0m
+-rw-r-----  1 syslog            adm               77113 nov.  14 16:40 [01;31msyslog.4.gz[0m
+-rw-r-----  1 syslog            adm              477623 nov.  13 16:37 [01;31msyslog.5.gz[0m
+-rw-------  1 root              root                  0 nov.   9 13:52 ubuntu-advantage-license-check.log
+-rw-------  1 root              root                  0 aug.  19 12:30 ubuntu-advantage.log
+-rw-------  1 root              root               1022 nov.  16 18:18 ubuntu-advantage-timer.log
+drwxr-x---  2 root              adm                4096 nov.  12 17:52 [01;34munattended-upgrades[0m
+-rw-r--r--  1 root              root                631 nov.   9 17:20 vboxadd-install.log
+-rw-r--r--  1 root              root                158 nov.   9 17:20 vboxadd-setup.log
+-rw-r--r--  1 root              root                214 nov.   9 17:18 vboxadd-setup.log.1
+-rw-r--r--  1 root              root                214 nov.   9 17:18 vboxadd-setup.log.2
+-rw-r--r--  1 root              root                214 nov.   9 17:15 vboxadd-setup.log.3
+-rw-r--r--  1 root              root                214 nov.   9 17:15 vboxadd-setup.log.4
+-rw-r--r--  1 root              root                  1 nov.   9 17:19 vboxadd-uninstall.log
+-rw-rw-r--  1 root              utmp              31104 nov.  18 16:58 wtmp
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ stat -l /var/log/
+stat: invalid option -- 'l'
+Try 'stat --help' for more information.
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ man ls
+[?1049h[22;0;0t[?1h=LS(1)                                        User Commands                                       LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List  information  about the FILEs (the current directory by default).  Sort entries alphabeti‐[m
+       cally if none of [1m-cftuvSUX[0m nor [1m--sort[0m is specified.[m
+[m
+       Mandatory arguments to long options are mandatory for short options too.[m
+[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[m
+       [1m-A[0m, [1m--almost-all[0m[m
+              do not list implied . and ..[m
+[m
+       [1m--author[0m[m
+              with [1m-l[0m, print the author of each file[m
+[m
+       [1m-b[0m, [1m--escape[0m[m
+              print C-style escapes for nongraphic characters[m
+[m
+       [1m--block-size[0m=[4mSIZE[24m[m
+              with [1m-l[0m, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format[m
+              below[m
+[m
+       [1m-B[0m, [1m--ignore-backups[0m[m
+              do not list implied entries ending with ~[m
+[m
+       [1m-c[0m     with  [1m-lt[0m:  sort  by, and show, ctime (time of last modification of file status informa‐[m
+              tion); with [1m-l[0m: show ctime and sort by name; otherwise: sort by ctime, newest first[m
+[m
+       [1m-C[0m     list entries by columns[m
+[m
+       [1m--color[0m[=[4mWHEN[24m][m
+              colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more[m
+              info below[m
+[m
+       [1m-d[0m, [1m--directory[0m[m
+              list directories themselves, not their contents[m
+[m
+       [1m-D[0m, [1m--dired[0m[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              generate output designed for Emacs' dired mode[m
+[7m Manual page ls(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-f[0m     do not sort, enable [1m-aU[0m, disable [1m-ls[0m [1m--color[0m[m
+[7m Manual page ls(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-F[0m, [1m--classify[0m[m
+[7m Manual page ls(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              append indicator (one of */=>@|) to entries[m
+[7m Manual page ls(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--file-type[0m[m
+[7m Manual page ls(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              likewise, except do not append '*'[m
+[7m Manual page ls(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--format[0m=[4mWORD[24m[m
+[7m Manual page ls(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              across [1m-x[0m, commas [1m-m[0m, horizontal [1m-x[0m, long [1m-l[0m, single-column [1m-1[0m, verbose [1m-l[0m, vertical [1m-C[0m[m
+[7m Manual page ls(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--full-time[0m[m
+[7m Manual page ls(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              like [1m-l[0m [1m--time-style[0m=[4mfull-iso[24m[m
+[7m Manual page ls(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-g[0m     like [1m-l[0m, but do not list owner[m
+[7m Manual page ls(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--group-directories-first[0m[m
+[7m Manual page ls(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              group directories before files;[m
+[7m Manual page ls(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              can be augmented with a [1m--sort[0m option, but any use of [1m--sort[0m=[4mnone[24m ([1m-U[0m) disables grouping[m
+[7m Manual page ls(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-G[0m, [1m--no-group[0m[m
+[7m Manual page ls(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              in a long listing, don't print group names[m
+[7m Manual page ls(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-h[0m, [1m--human-readable[0m[m
+[7m Manual page ls(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              with [1m-l[0m and [1m-s[0m, print sizes like 1K 234M 2G etc.[m
+[7m Manual page ls(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--si[0m   likewise, but use powers of 1000 not 1024[m
+[7m Manual page ls(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-H[0m, [1m--dereference-command-line[0m[m
+[7m Manual page ls(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              follow symbolic links listed on the command line[m
+[7m Manual page ls(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--dereference-command-line-symlink-to-dir[0m[m
+[7m Manual page ls(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              follow each command line symbolic link[m
+[7m Manual page ls(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              that points to a directory[m
+[7m Manual page ls(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--hide[0m=[4mPATTERN[24m[m
+[7m Manual page ls(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not list implied entries matching shell PATTERN (overridden by [1m-a[0m or [1m-A[0m)[m
+[7m Manual page ls(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--hyperlink[0m[=[4mWHEN[24m][m
+[7m Manual page ls(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              hyperlink file names; WHEN can be 'always' (default if omitted), 'auto', or 'never'[m
+[7m Manual page ls(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--indicator-style[0m=[4mWORD[24m[m
+[7m Manual page ls(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              append  indicator  with style WORD to entry names: none (default), slash ([1m-p[0m), file-type[m
+[7m Manual page ls(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ([1m--file-type[0m), classify ([1m-F[0m)[m
+[7m Manual page ls(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-i[0m, [1m--inode[0m[m
+[7m Manual page ls(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the index number of each file[m
+[7m Manual page ls(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-I[0m, [1m--ignore[0m=[4mPATTERN[24m[m
+[7m Manual page ls(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not list implied entries matching shell PATTERN[m
+[7m Manual page ls(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-k[0m, [1m--kibibytes[0m[m
+[7m Manual page ls(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              default to 1024-byte blocks for disk usage; used only with [1m-s[0m and per directory totals[m
+[7m Manual page ls(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-l[0m     use a long listing format[m
+[7m Manual page ls(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-L[0m, [1m--dereference[0m[m
+[7m Manual page ls(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              when showing file information for a symbolic link, show information  for  the  file  the[m
+[7m Manual page ls(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              link references rather than for the link itself[m
+[7m Manual page ls(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-m[0m     fill width with a comma separated list of entries[m
+[7m Manual page ls(1) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-n[0m, [1m--numeric-uid-gid[0m[m
+[7m Manual page ls(1) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              like [1m-l[0m, but list numeric user and group IDs[m
+[7m Manual page ls(1) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page ls(1) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-N[0m, [1m--literal[0m[m
+[7m Manual page ls(1) line 71 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ [H[2J]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ ls -ls /var/log/
+total 4972
+  44 -rw-r--r--  1 root              root              38923 nov.  16 09:53 alternatives.log
+   4 drwxr-xr-x  2 root              root               4096 nov.  16 09:53 [0m[01;34mapt[0m
+  44 -rw-r-----  1 syslog            adm               39217 nov.  18 17:01 auth.log
+  56 -rw-r-----  1 syslog            adm               52538 nov.  14 16:40 auth.log.1
+   4 -rw-------  1 root              root               3011 nov.  18 16:57 boot.log
+  28 -rw-------  1 root              root              27155 nov.  18 16:57 boot.log.1
+  12 -rw-------  1 root              root               9954 nov.  16 09:40 boot.log.2
+  20 -rw-------  1 root              root              19358 nov.  15 16:33 boot.log.3
+  20 -rw-------  1 root              root              19272 nov.  14 16:40 boot.log.4
+ 112 -rw-------  1 root              root             114430 nov.  13 16:37 boot.log.5
+ 104 -rw-r--r--  1 root              root             104003 aug.  19 12:30 bootstrap.log
+   0 -rw-rw----  1 root              utmp                  0 aug.  19 12:29 btmp
+   4 drwxr-xr-x  2 root              root               4096 nov.  18 16:57 [01;34mcups[0m
+   4 drwxr-xr-x  2 root              root               4096 aug.   4 03:00 [01;34mdist-upgrade[0m
+  48 -rw-r--r--  1 root              adm               45757 nov.  18 16:57 dmesg
+  48 -rw-r--r--  1 root              adm               45921 nov.  16 18:03 dmesg.0
+  16 -rw-r--r--  1 root              adm               13708 nov.  16 17:13 [01;31mdmesg.1.gz[0m
+  16 -rw-r--r--  1 root              adm               13737 nov.  16 09:40 [01;31mdmesg.2.gz[0m
+  16 -rw-r--r--  1 root              adm               13689 nov.  15 16:33 [01;31mdmesg.3.gz[0m
+  16 -rw-r--r--  1 root              adm               13683 nov.  14 16:45 [01;31mdmesg.4.gz[0m
+1124 -rw-r--r--  1 root              root            1145341 nov.  16 09:53 dpkg.log
+   8 -rw-r--r--  1 root              root              32032 nov.  16 09:47 faillog
+  12 -rw-r--r--  1 root              root              10884 nov.   9 13:45 fontconfig.log
+   4 drwx--x--x  2 root              gdm                4096 juli  12 11:44 [01;34mgdm3[0m
+   4 -rw-r--r--  1 root              root               1300 nov.  18 16:57 gpu-manager.log
+   4 drwxr-xr-x  3 root              root               4096 aug.  19 12:35 [01;34mhp[0m
+   4 drwxrwxr-x  2 root              root               4096 nov.   9 13:47 [01;34minstaller[0m
+   4 drwxr-sr-x+ 3 root              systemd-journal    4096 nov.   9 13:48 [01;34mjournal[0m
+ 432 -rw-r-----  1 syslog            adm              439647 nov.  18 16:58 kern.log
+1008 -rw-r-----  1 syslog            adm             1025091 nov.  14 16:40 kern.log.1
+  44 -rw-rw-r--  1 root              utmp             292292 nov.  16 09:47 lastlog
+   4 drwxr-xr-x  2 root              root               4096 juli  19 21:26 [01;34mopenvpn[0m
+   4 drwx------  2 root              root               4096 aug.  19 12:29 [01;34mprivate[0m
+   4 drwx------  2 speech-dispatcher root               4096 jan.  19  2020 [01;34mspeech-dispatcher[0m
+ 136 -rw-r-----  1 syslog            adm              138031 nov.  18 17:07 syslog
+ 824 -rw-r-----  1 syslog            adm              841800 nov.  18 16:57 syslog.1
+  44 -rw-r-----  1 syslog            adm               42064 nov.  16 09:40 [01;31msyslog.2.gz[0m
+  76 -rw-r-----  1 syslog            adm               75426 nov.  15 16:33 [01;31msyslog.3.gz[0m
+  76 -rw-r-----  1 syslog            adm               77113 nov.  14 16:40 [01;31msyslog.4.gz[0m
+ 468 -rw-r-----  1 syslog            adm              477623 nov.  13 16:37 [01;31msyslog.5.gz[0m
+   0 -rw-------  1 root              root                  0 nov.   9 13:52 ubuntu-advantage-license-check.log
+   0 -rw-------  1 root              root                  0 aug.  19 12:30 ubuntu-advantage.log
+   4 -rw-------  1 root              root               1022 nov.  16 18:18 ubuntu-advantage-timer.log
+   4 drwxr-x---  2 root              adm                4096 nov.  12 17:52 [01;34munattended-upgrades[0m
+   4 -rw-r--r--  1 root              root                631 nov.   9 17:20 vboxadd-install.log
+   4 -rw-r--r--  1 root              root                158 nov.   9 17:20 vboxadd-setup.log
+   4 -rw-r--r--  1 root              root                214 nov.   9 17:18 vboxadd-setup.log.1
+   4 -rw-r--r--  1 root              root                214 nov.   9 17:18 vboxadd-setup.log.2
+   4 -rw-r--r--  1 root              root                214 nov.   9 17:15 vboxadd-setup.log.3
+   4 -rw-r--r--  1 root              root                214 nov.   9 17:15 vboxadd-setup.log.4
+   4 -rw-r--r--  1 root              root                  1 nov.   9 17:19 vboxadd-uninstall.log
+  36 -rw-rw-r--  1 root              utmp              31104 nov.  18 16:58 wtmp
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ ls -ls /var/log/[K
+total 4972
+  44 -rw-r--r--  1 root              root              38923 nov.  16 09:53 alternatives.log
+   4 drwxr-xr-x  2 root              root               4096 nov.  16 09:53 [0m[01;34mapt[0m
+  44 -rw-r-----  1 syslog            adm               39217 nov.  18 17:01 auth.log
+  56 -rw-r-----  1 syslog            adm               52538 nov.  14 16:40 auth.log.1
+   4 -rw-------  1 root              root               3011 nov.  18 16:57 boot.log
+  28 -rw-------  1 root              root              27155 nov.  18 16:57 boot.log.1
+  12 -rw-------  1 root              root               9954 nov.  16 09:40 boot.log.2
+  20 -rw-------  1 root              root              19358 nov.  15 16:33 boot.log.3
+  20 -rw-------  1 root              root              19272 nov.  14 16:40 boot.log.4
+ 112 -rw-------  1 root              root             114430 nov.  13 16:37 boot.log.5
+ 104 -rw-r--r--  1 root              root             104003 aug.  19 12:30 bootstrap.log
+   0 -rw-rw----  1 root              utmp                  0 aug.  19 12:29 btmp
+   4 drwxr-xr-x  2 root              root               4096 nov.  18 16:57 [01;34mcups[0m
+   4 drwxr-xr-x  2 root              root               4096 aug.   4 03:00 [01;34mdist-upgrade[0m
+  48 -rw-r--r--  1 root              adm               45757 nov.  18 16:57 dmesg
+  48 -rw-r--r--  1 root              adm               45921 nov.  16 18:03 dmesg.0
+  16 -rw-r--r--  1 root              adm               13708 nov.  16 17:13 [01;31mdmesg.1.gz[0m
+  16 -rw-r--r--  1 root              adm               13737 nov.  16 09:40 [01;31mdmesg.2.gz[0m
+  16 -rw-r--r--  1 root              adm               13689 nov.  15 16:33 [01;31mdmesg.3.gz[0m
+  16 -rw-r--r--  1 root              adm               13683 nov.  14 16:45 [01;31mdmesg.4.gz[0m
+1124 -rw-r--r--  1 root              root            1145341 nov.  16 09:53 dpkg.log
+   8 -rw-r--r--  1 root              root              32032 nov.  16 09:47 faillog
+  12 -rw-r--r--  1 root              root              10884 nov.   9 13:45 fontconfig.log
+   4 drwx--x--x  2 root              gdm                4096 juli  12 11:44 [01;34mgdm3[0m
+   4 -rw-r--r--  1 root              root               1300 nov.  18 16:57 gpu-manager.log
+   4 drwxr-xr-x  3 root              root               4096 aug.  19 12:35 [01;34mhp[0m
+   4 drwxrwxr-x  2 root              root               4096 nov.   9 13:47 [01;34minstaller[0m
+   4 drwxr-sr-x+ 3 root              systemd-journal    4096 nov.   9 13:48 [01;34mjournal[0m
+ 432 -rw-r-----  1 syslog            adm              439647 nov.  18 16:58 kern.log
+1008 -rw-r-----  1 syslog            adm             1025091 nov.  14 16:40 kern.log.1
+  44 -rw-rw-r--  1 root              utmp             292292 nov.  16 09:47 lastlog
+   4 drwxr-xr-x  2 root              root               4096 juli  19 21:26 [01;34mopenvpn[0m
+   4 drwx------  2 root              root               4096 aug.  19 12:29 [01;34mprivate[0m
+   4 drwx------  2 speech-dispatcher root               4096 jan.  19  2020 [01;34mspeech-dispatcher[0m
+ 136 -rw-r-----  1 syslog            adm              138031 nov.  18 17:07 syslog
+ 824 -rw-r-----  1 syslog            adm              841800 nov.  18 16:57 syslog.1
+  44 -rw-r-----  1 syslog            adm               42064 nov.  16 09:40 [01;31msyslog.2.gz[0m
+  76 -rw-r-----  1 syslog            adm               75426 nov.  15 16:33 [01;31msyslog.3.gz[0m
+  76 -rw-r-----  1 syslog            adm               77113 nov.  14 16:40 [01;31msyslog.4.gz[0m
+ 468 -rw-r-----  1 syslog            adm              477623 nov.  13 16:37 [01;31msyslog.5.gz[0m
+   0 -rw-------  1 root              root                  0 nov.   9 13:52 ubuntu-advantage-license-check.log
+   0 -rw-------  1 root              root                  0 aug.  19 12:30 ubuntu-advantage.log
+   4 -rw-------  1 root              root               1022 nov.  16 18:18 ubuntu-advantage-timer.log
+   4 drwxr-x---  2 root              adm                4096 nov.  12 17:52 [01;34munattended-upgrades[0m
+   4 -rw-r--r--  1 root              root                631 nov.   9 17:20 vboxadd-install.log
+   4 -rw-r--r--  1 root              root                158 nov.   9 17:20 vboxadd-setup.log
+   4 -rw-r--r--  1 root              root                214 nov.   9 17:18 vboxadd-setup.log.1
+   4 -rw-r--r--  1 root              root                214 nov.   9 17:18 vboxadd-setup.log.2
+   4 -rw-r--r--  1 root              root                214 nov.   9 17:15 vboxadd-setup.log.3
+   4 -rw-r--r--  1 root              root                214 nov.   9 17:15 vboxadd-setup.log.4
+   4 -rw-r--r--  1 root              root                  1 nov.   9 17:19 vboxadd-uninstall.log
+  36 -rw-rw-r--  1 root              utmp              31104 nov.  18 16:58 wtmp
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ [H[2J]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ ks[K[Kls -ld /var/log
+drwxrwxr-x 13 root syslog 4096 nov.  18 16:57 [0m[01;34m/var/log[0m
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ ls -1 /etc/
+[0m[01;34macpi[0m
+adduser.conf
+[01;34malsa[0m
+[01;34malternatives[0m
+anacrontab
+apg.conf
+[01;34mapm[0m
+[01;34mapparmor[0m
+[01;34mapparmor.d[0m
+[01;34mapport[0m
+appstream.conf
+[01;34mapt[0m
+[01;34mavahi[0m
+bash.bashrc
+bash_completion
+[01;34mbash_completion.d[0m
+bindresvport.blacklist
+[01;34mbinfmt.d[0m
+[01;34mbluetooth[0m
+brlapi.key
+[01;34mbrltty[0m
+brltty.conf
+[01;34mca-certificates[0m
+ca-certificates.conf
+ca-certificates.conf.dpkg-old
+[01;34mcalendar[0m
+[01;34mchatscripts[0m
+[01;34mconsole-setup[0m
+[01;34mcracklib[0m
+[01;34mcron.d[0m
+[01;34mcron.daily[0m
+[01;34mcron.hourly[0m
+[01;34mcron.monthly[0m
+crontab
+[01;34mcron.weekly[0m
+[01;34mcups[0m
+[01;34mcupshelpers[0m
+[01;34mdbus-1[0m
+[01;34mdconf[0m
+debconf.conf
+debian_version
+[01;34mdefault[0m
+deluser.conf
+[01;34mdepmod.d[0m
+[01;34mdhcp[0m
+[01;34mdictionaries-common[0m
+[01;34mdkms[0m
+[01;34mdpkg[0m
+e2scrub.conf
+[01;34memacs[0m
+environment
+[01;34menvironment.d[0m
+ethertypes
+[01;34mfirefox[0m
+[01;34mfonts[0m
+fprintd.conf
+fstab
+fuse.conf
+[01;34mfwupd[0m
+gai.conf
+gamemode.ini
+[01;34mgdb[0m
+[01;34mgdm3[0m
+[01;34mgeoclue[0m
+[01;34mghostscript[0m
+[01;34mglvnd[0m
+[01;34mgnome[0m
+[01;34mgroff[0m
+group
+group-
+[01;34mgrub.d[0m
+gshadow
+gshadow-
+[01;34mgss[0m
+[01;34mgtk-2.0[0m
+[01;34mgtk-3.0[0m
+hdparm.conf
+host.conf
+hostid
+hostname
+hosts
+hosts.allow
+hosts.deny
+[01;34mhp[0m
+[01;34mifplugd[0m
+[01;34minit[0m
+[01;34minit.d[0m
+[01;34minitramfs-tools[0m
+inputrc
+[01;34minsserv.conf.d[0m
+[01;34miproute2[0m
+issue
+issue.net
+[01;34mkernel[0m
+kernel-img.conf
+kerneloops.conf
+[01;34mldap[0m
+ld.so.cache
+ld.so.conf
+[01;34mld.so.conf.d[0m
+legal
+libao.conf
+libaudit.conf
+[01;34mlibblockdev[0m
+[01;34mlibnl-3[0m
+[01;34mlibpaper.d[0m
+[01;34mlibreoffice[0m
+locale.alias
+locale.gen
+[01;36mlocaltime[0m
+[01;34mlogcheck[0m
+login.defs
+logrotate.conf
+[01;34mlogrotate.d[0m
+lsb-release
+ltrace.conf
+machine-id
+magic
+magic.mime
+mailcap
+mailcap.order
+manpath.config
+mime.types
+mke2fs.conf
+[01;34mmodprobe.d[0m
+modules
+[01;34mmodules-load.d[0m
+[01;36mmtab[0m
+mtools.conf
+[01;34mmysql[0m
+nanorc
+[01;34mnetplan[0m
+[01;34mnetwork[0m
+[01;34mnetworkd-dispatcher[0m
+[01;34mNetworkManager[0m
+networks
+[01;34mnewt[0m
+nsswitch.conf
+[01;34mopenvpn[0m
+[01;34mopt[0m
+[01;36mos-release[0m
+[01;34mPackageKit[0m
+pam.conf
+[01;34mpam.d[0m
+papersize
+passwd
+passwd-
+[01;34mpcmcia[0m
+[01;34mperl[0m
+[01;34mpki[0m
+[01;34mpm[0m
+pnm2ppa.conf
+[01;34mpolkit-1[0m
+popularity-contest.conf
+[01;34mppp[0m
+profile
+[01;34mprofile.d[0m
+protocols
+[01;34mpulse[0m
+[01;34mpython3[0m
+[01;34mpython3.8[0m
+[01;34mrc0.d[0m
+[01;34mrc1.d[0m
+[01;34mrc2.d[0m
+[01;34mrc3.d[0m
+[01;34mrc4.d[0m
+[01;34mrc5.d[0m
+[01;34mrc6.d[0m
+[01;34mrcS.d[0m
+[01;36mresolv.conf[0m
+[01;36mrmt[0m
+rpc
+rsyslog.conf
+[01;34mrsyslog.d[0m
+rygel.conf
+[01;34msane.d[0m
+[01;34msecurity[0m
+[01;34mselinux[0m
+sensors3.conf
+[01;34msensors.d[0m
+services
+[01;34msgml[0m
+shadow
+shadow-
+shells
+[01;34mskel[0m
+[01;34msnmp[0m
+[01;34mspeech-dispatcher[0m
+[01;34mssh[0m
+[01;34mssl[0m
+subgid
+subgid-
+subuid
+subuid-
+sudoers
+[01;34msudoers.d[0m
+sysctl.conf
+[01;34msysctl.d[0m
+[01;34msystemd[0m
+[01;34mterminfo[0m
+[01;34mthermald[0m
+[01;34mthunderbird[0m
+timezone
+[01;34mtmpfiles.d[0m
+[01;34mubuntu-advantage[0m
+ucf.conf
+[01;34mudev[0m
+[01;34mudisks2[0m
+[01;34mufw[0m
+updatedb.conf
+[01;34mupdate-manager[0m
+[01;34mupdate-motd.d[0m
+[01;34mupdate-notifier[0m
+[01;34mUPower[0m
+usb_modeswitch.conf
+[01;34musb_modeswitch.d[0m
+vdpau_wrapper.cfg
+[01;34mvim[0m
+[01;36mvtrgb[0m
+[01;34mvulkan[0m
+wgetrc
+[01;34mwpa_supplicant[0m
+[01;34mX11[0m
+xattr.conf
+[01;34mxdg[0m
+[01;34mxml[0m
+zsh_command_not_found
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ ls -a ~/
+[0m[01;34m.[0m              [01;34m.config[0m     [01;34m.local[0m    [01;34mPublic[0m                     .vboxclient-clipboard.pid
+[01;34m..[0m             [01;34mDesktop[0m     [01;34m.mozilla[0m  script                     .vboxclient-display-svga-x11.pid
+bah            [01;34mDocuments[0m   [01;34mMusic[0m     [01;34msnap[0m                       .vboxclient-draganddrop.pid
+.bash_history  [01;34mDownloads[0m   [01;34mPictures[0m  [01;34m.ssh[0m                       .vboxclient-seamless.pid
+.bash_logout   .gitconfig  [01;34m.pki[0m      .sudo_as_admin_successful  [01;34mVideos[0m
+.bashrc        [01;34m.gnupg[0m      .profile  [01;34mTemplates[0m                  .viminfo
+[01;34m.cache[0m         .lesshst    [01;34mprojects[0m  time                       [01;34m.vscode[0m
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-04[00m$ exit
+
+Script done on 2021-11-18 17:09:41+01:00 [COMMAND_EXIT_CODE="0"]

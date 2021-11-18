@@ -1,0 +1,43 @@
+Script started on 2021-11-18 17:27:09+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="47"]
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[00m$ stat ~/linux.txt 
+  File: /home/madeleine/linux.txt
+  Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
+Device: 805h/2053d	Inode: 950758      Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/madeleine)   Gid: ( 1000/madeleine)
+Access: 2021-11-18 17:21:52.259287688 +0100
+Modify: 1990-01-15 10:30:55.000000000 +0100
+Change: 2021-11-18 17:24:39.097915671 +0100
+ Birth: -
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[00m$ stat /etc/passwd
+  File: /etc/passwd
+  Size: 2907      	Blocks: 8          IO Block: 4096   regular file
+Device: 805h/2053d	Inode: 1080379     Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-11-18 16:57:31.627999987 +0100
+Modify: 2021-11-16 09:47:25.848200629 +0100
+Change: 2021-11-16 09:47:25.848200629 +0100
+ Birth: -
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[00m$ touch ~/linux.txt -r /etc/ passwd
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[00m$ touch ~/linux.txt -r /etc/passwd[A]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[00m$ [10Pstat /etc/passwd
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C~/linux.txt 
+  File: /home/madeleine/linux.txt
+  Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
+Device: 805h/2053d	Inode: 950758      Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/madeleine)   Gid: ( 1000/madeleine)
+Access: 2021-11-18 16:57:31.627999987 +0100
+Modify: 2021-11-16 09:47:25.848200629 +0100
+Change: 2021-11-18 17:28:15.495995772 +0100
+ Birth: -
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[00m$ stat ~/linux.txt touch ~/linux.txt -r /etc/passwd[A]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[00m$ [10Pstat /etc/passwd
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+  File: /etc/passwd
+  Size: 2907      	Blocks: 8          IO Block: 4096   regular file
+Device: 805h/2053d	Inode: 1080379     Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-11-18 16:57:31.627999987 +0100
+Modify: 2021-11-16 09:47:25.848200629 +0100
+Change: 2021-11-16 09:47:25.848200629 +0100
+ Birth: -
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-08[00m$ exit
+
+Script done on 2021-11-18 17:28:28+01:00 [COMMAND_EXIT_CODE="0"]

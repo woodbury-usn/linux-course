@@ -1,0 +1,11 @@
+Challenge #4
+
+1.    Display the man page of ls and search for -d option.
+
+2.    Display the contents of /var/log using a long listing format.
+
+3.    Display information about the /var/log directory in a long listing format.
+
+4.    Display the contents of /etc on a single column.
+
+5.    Display all the files and directories (including hidden ones) from the user's home directory.

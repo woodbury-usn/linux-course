@@ -1,0 +1,7 @@
+Challenge #13
+
+1.    Display the first 3 lines of /etc/passwd
+
+2.    Display the last 5 lines of /etc/shadow
+
+3.    Display the contents of /etc/group starting with line 5

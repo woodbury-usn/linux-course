@@ -1,0 +1,53 @@
+Script started on 2021-11-18 17:46:41+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="47"]
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-15[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-15[00m$ a[Kman watch
+[?1049h[22;0;0t[?1h=WATCH(1)                                     User Commands                                    WATCH(1)[m
+[m
+[1mNAME[0m[m
+       watch - execute a program periodically, showing output fullscreen[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mwatch[0m [[4moptions[24m] [4mcommand[24m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mwatch[0m  runs  [4mcommand[24m repeatedly, displaying its output and errors (the first screenfull).  This[m
+       allows you to watch the program output change over time.  By default, [4mcommand[24m is  run  every  2[m
+       seconds and [1mwatch[0m will run until interrupted.[m
+[m
+[1mOPTIONS[0m[m
+       [1m-d[0m, [1m--differences[0m [[4mpermanent[24m][m
+              Highlight  the  differences between successive updates.  Option will read optional argu‐[m
+              ment that changes highlight to be permanent, allowing to see what has changed  at  least[m
+              once since first iteration.[m
+[m
+       [1m-n[0m, [1m--interval[0m [4mseconds[24m[m
+              Specify  update  interval.  The command will not allow quicker than 0.1 second interval,[m
+              in which the smaller values are converted. Both '.' and ',' work for any locales.[m
+[m
+       [1m-p[0m, [1m--precise[0m[m
+              Make [1mwatch[0m attempt to run [4mcommand[24m every [4minterval[24m seconds. Try it with [1mntptime[0m and notice[m
+              how the fractional seconds stays (nearly) the same, as opposed to normal mode where they[m
+              continuously increase.[m
+[m
+       [1m-t[0m, [1m--no-title[0m[m
+              Turn off the header showing the interval, command, and current time at the  top  of  the[m
+              display, as well as the following blank line.[m
+[m
+       [1m-b[0m, [1m--beep[0m[m
+              Beep if command has a non-zero exit.[m
+[m
+       [1m-e[0m, [1m--errexit[0m[m
+              Freeze updates on command error, and exit after a key press.[m
+[m
+       [1m-g[0m, [1m--chgexit[0m[m
+              Exit when the output of [4mcommand[24m changes.[m
+[m
+       [1m-c[0m, [1m--color[0m[m
+              Interpret ANSI color and style sequences.[m
+[m
+       [1m-x[0m, [1m--exec[0m[m
+              Pass  [4mcommand[24m to [1mexec[0m(2) instead of [1msh[0m [1m-c[0m which reduces the need to use extra quoting to[m
+[7m Manual page watch(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-15[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-15[00m$ cd
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ watch -n 2 ls -l
+[?1049h[22;0;0t[1;47r(B[m[4l[?7h[H[2JEvery 2,0s: ls -l[1;60Hmadeleine-VirtualBox: Thu Nov 18 17:47:30 2021[3;1Htotal 52[4d-rw-rw-r-- 1 madeleine madeleine  650 nov.  16 18:28 bah[5ddrwxr-xr-x 2 madeleine madeleine 4096 nov.   9 13:48 Desktop[6ddrwxr-xr-x 5 madeleine madeleine 4096 nov.  16 18:04 Documents[7ddrwxr-xr-x 2 madeleine madeleine 4096 nov.   9 18:14 Downloads[8d-rw-rw-r-- 1 madeleine madeleine    0 nov.  16 09:47 linux.txt[9ddrwxr-xr-x 2 madeleine madeleine 4096 nov.   9 13:48 Music[10ddrwxr-xr-x 2 madeleine madeleine 4096 nov.  13 17:21 Pictures[11ddrwxrwxr-x 2 madeleine madeleine 4096 nov.  16 17:30 projects[12ddrwxr-xr-x 2 madeleine madeleine 4096 nov.   9 13:48 Public[13d-rw-rw-r-- 1 madeleine madeleine  575 nov.  16 18:29 script[14ddrwx------ 4 madeleine madeleine 4096 nov.  12 16:57 snap[15ddrwxr-xr-x 2 madeleine madeleine 4096 nov.   9 13:48 Templates[16d-rw-rw-r-- 1 madeleine madeleine   70 nov.  16 18:29 time[17ddrwxr-xr-x 2 madeleine madeleine 4096 nov.   9 13:48 Videos[47;105H[1;100H2[47;105H[1;100H4[47;105H[1;100H6[47;105H[1;100H8[47;105H[1;99H40[47;105H[1;100H2[47;105H[1;100H4[47;105H[1;100H6[47;105H[1;100H8[47;105H[1;99H50[47;105H[10d[L[1;100H2[3;8H6[10ddrwxrwxr-x 2 madeleine madeleine 4096 nov.  18 17:47 new_directory[47;105H[1;100H4[47;105H[1;100H6[47;105H[1;100H8[47;105H[1;97H8:00[47;105H[1;100H2[47;105H[1;100H4[47;105H[11d[L[1;100H6[11d-rw-rw-r-- 1 madeleine madeleine    0 nov.  18 17:48 NEW_FILE[47;105H[1;100H8[47;105H[1;99H10[47;105H[1;100H2[47;105H[1;100H4[47;105H[11d[M[1;100H6[47;105H[1;100H8[47;105H[1;99H20[47;105H[1;100H2[47;105H[10d[M[1;100H4[3;8H2[47;105H[1;100H6[47;105H[47;1H[?1049l[23;0;0t[?1l>]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ exit
+
+Script done on 2021-11-18 17:48:30+01:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,26 @@
+Script started on 2021-11-18 17:43:30+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="47"]
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-14[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-14[00m$ [H[2J]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-14[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-14[00m$ tail -f 12 /var/log/auth.log
+tail: cannot open '12' for reading: No such file or directory
+==> /var/log/auth.log <==
+Nov 18 17:17:01 madeleine-VirtualBox CRON[4022]: pam_unix(cron:session): session closed for user root
+Nov 18 17:30:01 madeleine-VirtualBox CRON[4333]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 18 17:30:01 madeleine-VirtualBox CRON[4333]: pam_unix(cron:session): session closed for user root
+Nov 18 17:37:51 madeleine-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Nov 18 17:37:51 madeleine-VirtualBox pkexec[5000]: madeleine: Executing command [USER=root] [TTY=unknown] [CWD=/home/madeleine] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Nov 18 17:40:01 madeleine-VirtualBox sudo: madeleine : TTY=pts/2 ; PWD=/home/madeleine/Documents/Linux-course/challenges/01-the-file-system/challenge-13 ; USER=root ; COMMAND=/usr/bin/tail -n 5 /etc/shadow
+Nov 18 17:40:01 madeleine-VirtualBox sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Nov 18 17:40:01 madeleine-VirtualBox sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 17:40:47 madeleine-VirtualBox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Nov 18 17:40:47 madeleine-VirtualBox pkexec[5099]: madeleine: Executing command [USER=root] [TTY=unknown] [CWD=/home/madeleine] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Nov 18 17:44:44 madeleine-VirtualBox sudo: madeleine : TTY=pts/1 ; PWD=/home/madeleine/Documents/Linux-course/commands ; USER=root ; COMMAND=/usr/bin/su
+Nov 18 17:44:44 madeleine-VirtualBox sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
+Nov 18 17:44:44 madeleine-VirtualBox su: (to root) madeleine on pts/1
+Nov 18 17:44:44 madeleine-VirtualBox su: pam_unix(su:session): session opened for user root by (uid=0)
+Nov 18 17:44:49 madeleine-VirtualBox su: (to root) madeleine on pts/1
+Nov 18 17:44:49 madeleine-VirtualBox su: pam_unix(su:session): session opened for user root by (uid=0)
+Nov 18 17:45:00 madeleine-VirtualBox su: (to madeleine) madeleine on pts/1
+Nov 18 17:45:00 madeleine-VirtualBox su: pam_unix(su:session): session opened for user madeleine by (uid=0)
+^C
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-14[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-14[00m$ ^C
+
+Script done on 2021-11-18 17:45:43+01:00 [COMMAND_EXIT_CODE="130"]

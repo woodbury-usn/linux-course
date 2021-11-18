@@ -1,0 +1,7 @@
+Challenge #6
+
+1.    Create a new file called linux.txt in the user’s home directory using the touch command.
+
+2.    Notice the file timestamps using both stat and ls commands.
+
+3.    Display the entire timestamp of the file using the ls command.

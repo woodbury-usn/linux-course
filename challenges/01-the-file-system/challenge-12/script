@@ -1,0 +1,236 @@
+Script started on 2021-11-18 17:36:35+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="47"]
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-12[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-12[00m$ less /etc/ssh/a[Kssh_config
+[?1049h[22;0;0t[?1h=
+# This is the ssh client system-wide configuration file.  See
+# ssh_config(5) for more information.  This file provides defaults for
+# users, and the values can be changed in per-user configuration files
+# or on the command line.
+
+# Configuration data is parsed as follows:
+#  1. command line options
+#  2. user-specific file
+#  3. system-wide file
+# Any configuration value is only changed the first time it is set.
+# Thus, host-specific definitions should be at the beginning of the
+# configuration file, and defaults at the end.
+
+# Site-wide defaults for some commonly used options.  For a comprehensive
+# list of available options, their meanings and defaults, please see the
+# ssh_config(5) man page.
+
+Include /etc/ssh/ssh_config.d/*.conf
+
+Host *
+#   ForwardAgent no
+#   ForwardX11 no
+#   ForwardX11Trusted yes
+#   PasswordAuthentication yes
+#   HostbasedAuthentication no
+#   GSSAPIAuthentication no
+#   GSSAPIDelegateCredentials no
+#   GSSAPIKeyExchange no
+#   GSSAPITrustDNS no
+#   BatchMode no
+#   CheckHostIP yes
+#   AddressFamily any
+#   ConnectTimeout 0
+#   StrictHostKeyChecking ask
+#   IdentityFile ~/.ssh/id_rsa
+#   IdentityFile ~/.ssh/id_dsa
+#   IdentityFile ~/.ssh/id_ecdsa
+#   IdentityFile ~/.ssh/id_ed25519
+#   Port 22
+#   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+#   MACs hmac-md5,hmac-sha1,umac-64@openssh.com
+#   EscapeChar ~
+#   Tunnel no
+#   TunnelDevice any:any
+#   PermitLocalCommand no
+[7m/etc/ssh/ssh_config[27m[K[K...skipping...
+# Configuration data is parsed as follows:
+#  1. command line options
+#  2. user-specific file
+#  3. system-wide file
+# Any configuration value is only changed the first time it is set.
+# Thus, host-specific definitions should be at the beginning of the
+# configuration file, and defaults at the end.
+
+# Site-wide defaults for some commonly used options.  For a comprehensive
+# list of available options, their meanings and defaults, please see the
+# ssh_config(5) man page.
+
+Include /etc/ssh/ssh_config.d/*.conf
+
+Host *
+#   ForwardAgent no
+#   ForwardX11 no
+#   ForwardX11Trusted yes
+#   PasswordAuthentication yes
+#   HostbasedAuthentication no
+#   GSSAPIAuthentication no
+#   GSSAPIDelegateCredentials no
+#   GSSAPIKeyExchange no
+#   GSSAPITrustDNS no
+#   BatchMode no
+#   CheckHostIP yes
+#   AddressFamily any
+#   ConnectTimeout 0
+#   StrictHostKeyChecking ask
+#   IdentityFile ~/.ssh/id_rsa
+#   IdentityFile ~/.ssh/id_dsa
+#   IdentityFile ~/.ssh/id_ecdsa
+#   IdentityFile ~/.ssh/id_ed25519
+#   Port 22
+#   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+#   MACs hmac-md5,hmac-sha1,umac-64@openssh.com
+#   EscapeChar ~
+#   Tunnel no
+#   TunnelDevice any:any
+#   PermitLocalCommand no
+#   VisualHostKey no
+#   ProxyCommand ssh -q -W %h:%p gateway.example.com
+#   RekeyLimit 1G 1h
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+[7m(END)[27m[K[K[HM
+[HM# or on the command line.
+[HM# users, and the values can be changed in per-user configuration files
+[HM# ssh_config(5) for more information.  This file provides defaults for
+[HM# This is the ssh client system-wide configuration file.  See
+[HM
+[47;1H[K:[K[K [KESCESC[KOO[KBB[K#   VisualHostKey no
+:[K[K [KESCESC[KOO[KBB[K#   ProxyCommand ssh -q -W %h:%p gateway.example.com
+:[K[K [KESCESC[KOO[KBB[K#   RekeyLimit 1G 1h
+:[K[K [KESCESC[KOO[KBB[K    SendEnv LANG LC_*
+:[K[K [KESCESC[KOO[KBB[K    HashKnownHosts yes
+:[K[K [KESCESC[KOO[KBB[K    GSSAPIAuthentication yes
+[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K/[KCC[Kii[Kpp[Khh[Kee[Krr[Kss[K[1;1H# Configuration data is parsed as follows:
+[2;1H#  1. command line options
+[3;1H#  2. user-specific file
+[4;1H#  3. system-wide file
+[5;1H# Any configuration value is only changed the first time it is set.
+[6;1H# Thus, host-specific definitions should be at the beginning of the
+[7;1H# configuration file, and defaults at the end.
+[8;1H
+[9;1H# Site-wide defaults for some commonly used options.  For a comprehensive
+[10;1H# list of available options, their meanings and defaults, please see the
+[11;1H# ssh_config(5) man page.
+[12;1H
+[13;1HInclude /etc/ssh/ssh_config.d/*.conf
+[14;1H
+[15;1HHost *
+[16;1H#   ForwardAgent no
+[17;1H#   ForwardX11 no
+[18;1H#   ForwardX11Trusted yes
+[19;1H#   PasswordAuthentication yes
+[20;1H#   HostbasedAuthentication no
+[21;1H#   GSSAPIAuthentication no
+[22;1H#   GSSAPIDelegateCredentials no
+[23;1H#   GSSAPIKeyExchange no
+[24;1H#   GSSAPITrustDNS no
+[25;1H#   BatchMode no
+[26;1H#   CheckHostIP yes
+[27;1H#   AddressFamily any
+[28;1H#   ConnectTimeout 0
+[29;1H#   StrictHostKeyChecking ask
+[30;1H#   IdentityFile ~/.ssh/id_rsa
+[31;1H#   IdentityFile ~/.ssh/id_dsa
+[32;1H#   IdentityFile ~/.ssh/id_ecdsa
+[33;1H#   IdentityFile ~/.ssh/id_ed25519
+[34;1H#   Port 22
+[35;1H#   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+[36;1H#   MACs hmac-md5,hmac-sha1,umac-64@openssh.com
+[37;1H#   EscapeChar ~
+[38;1H#   Tunnel no
+[39;1H#   TunnelDevice any:any
+[40;1H#   PermitLocalCommand no
+[41;1H#   VisualHostKey no
+[42;1H#   ProxyCommand ssh -q -W %h:%p gateway.example.com
+[43;1H#   RekeyLimit 1G 1h
+[44;1H    SendEnv LANG LC_*
+[45;1H    HashKnownHosts yes
+[46;1H    GSSAPIAuthentication yes
+[47;1H[1;1H# Configuration data is parsed as follows:
+[2;1H#  1. command line options
+[3;1H#  2. user-specific file
+[4;1H#  3. system-wide file
+[5;1H# Any configuration value is only changed the first time it is set.
+[6;1H# Thus, host-specific definitions should be at the beginning of the
+[7;1H# configuration file, and defaults at the end.
+[8;1H
+[9;1H# Site-wide defaults for some commonly used options.  For a comprehensive
+[10;1H# list of available options, their meanings and defaults, please see the
+[11;1H# ssh_config(5) man page.
+[12;1H
+[13;1HInclude /etc/ssh/ssh_config.d/*.conf
+[14;1H
+[15;1HHost *
+[16;1H#   ForwardAgent no
+[17;1H#   ForwardX11 no
+[18;1H#   ForwardX11Trusted yes
+[19;1H#   PasswordAuthentication yes
+[20;1H#   HostbasedAuthentication no
+[21;1H#   GSSAPIAuthentication no
+[22;1H#   GSSAPIDelegateCredentials no
+[23;1H#   GSSAPIKeyExchange no
+[24;1H#   GSSAPITrustDNS no
+[25;1H#   BatchMode no
+[26;1H#   CheckHostIP yes
+[27;1H#   AddressFamily any
+[28;1H#   ConnectTimeout 0
+[29;1H#   StrictHostKeyChecking ask
+[30;1H#   IdentityFile ~/.ssh/id_rsa
+[31;1H#   IdentityFile ~/.ssh/id_dsa
+[32;1H#   IdentityFile ~/.ssh/id_ecdsa
+[33;1H#   IdentityFile ~/.ssh/id_ed25519
+[34;1H#   Port 22
+[35;1H#   [7mCiphers[27m aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+[36;1H#   MACs hmac-md5,hmac-sha1,umac-64@openssh.com
+[37;1H#   EscapeChar ~
+[38;1H#   Tunnel no
+[39;1H#   TunnelDevice any:any
+[40;1H#   PermitLocalCommand no
+[41;1H#   VisualHostKey no
+[42;1H#   ProxyCommand ssh -q -W %h:%p gateway.example.com
+[43;1H#   RekeyLimit 1G 1h
+[44;1H    SendEnv LANG LC_*
+[45;1H    HashKnownHosts yes
+[46;1H    GSSAPIAuthentication yes
+[47;1H[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7m(END)[27m[K[K[?1l>[?1049l[23;0;0t]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-12[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-12[00m$ exit
+
+Script done on 2021-11-18 17:38:12+01:00 [COMMAND_EXIT_CODE="0"]

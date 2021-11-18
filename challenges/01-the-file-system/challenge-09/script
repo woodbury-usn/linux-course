@@ -1,0 +1,58 @@
+Script started on 2021-11-18 17:29:52+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="47"]
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-09[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-09[00m$ ls -lu --reverse /var/log/ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K/
+total 4988
+-rw-rw-r--  1 root              utmp              31104 nov.  18 16:58 wtmp
+-rw-r--r--  1 root              root                  1 nov.   9 17:19 vboxadd-uninstall.log
+-rw-r--r--  1 root              root                214 nov.   9 17:15 vboxadd-setup.log.4
+-rw-r--r--  1 root              root                214 nov.   9 17:15 vboxadd-setup.log.3
+-rw-r--r--  1 root              root                214 nov.   9 17:18 vboxadd-setup.log.2
+-rw-r--r--  1 root              root                214 nov.   9 17:18 vboxadd-setup.log.1
+-rw-r--r--  1 root              root                158 nov.   9 17:19 vboxadd-setup.log
+-rw-r--r--  1 root              root                631 nov.   9 17:19 vboxadd-install.log
+drwxr-x---  2 root              adm                4096 nov.  16 17:29 [0m[01;34munattended-upgrades[0m
+-rw-------  1 root              root               1022 nov.  16 18:18 ubuntu-advantage-timer.log
+-rw-------  1 root              root                  0 aug.  19 12:30 ubuntu-advantage.log
+-rw-------  1 root              root                  0 nov.   9 13:52 ubuntu-advantage-license-check.log
+-rw-r-----  1 syslog            adm              477623 nov.   9 13:48 [01;31msyslog.5.gz[0m
+-rw-r-----  1 syslog            adm               77113 nov.  13 17:40 [01;31msyslog.4.gz[0m
+-rw-r-----  1 syslog            adm               75426 nov.  14 16:40 [01;31msyslog.3.gz[0m
+-rw-r-----  1 syslog            adm               42064 nov.  15 16:33 [01;31msyslog.2.gz[0m
+-rw-r-----  1 syslog            adm              841800 nov.  16 09:40 syslog.1
+-rw-r-----  1 syslog            adm              152768 nov.  18 16:57 syslog
+drwx------  2 speech-dispatcher root               4096 nov.  16 17:29 [01;34mspeech-dispatcher[0m
+drwx------  2 root              root               4096 nov.  16 17:29 [01;34mprivate[0m
+drwxr-xr-x  2 root              root               4096 nov.  16 17:29 [01;34mopenvpn[0m
+-rw-rw-r--  1 root              utmp             292292 aug.  19 12:46 lastlog
+-rw-r-----  1 syslog            adm             1025091 nov.   9 13:48 kern.log.1
+-rw-r-----  1 syslog            adm              439647 nov.  14 16:40 kern.log
+drwxr-sr-x+ 3 root              systemd-journal    4096 nov.  18 16:57 [01;34mjournal[0m
+drwxrwxr-x  2 root              root               4096 nov.  16 17:29 [01;34minstaller[0m
+drwxr-xr-x  3 root              root               4096 nov.  16 17:29 [01;34mhp[0m
+-rw-r--r--  1 root              root               1300 nov.   9 13:48 gpu-manager.log
+drwx--x--x  2 root              gdm                4096 nov.  16 17:29 [01;34mgdm3[0m
+-rw-r--r--  1 root              root              10884 aug.  19 12:46 fontconfig.log
+-rw-r--r--  1 root              root              32032 aug.  19 12:46 faillog
+-rw-r--r--  1 root              root            1145341 aug.  19 12:46 dpkg.log
+-rw-r--r--  1 root              adm               13683 nov.  14 16:45 [01;31mdmesg.4.gz[0m
+-rw-r--r--  1 root              adm               13689 nov.  15 16:33 [01;31mdmesg.3.gz[0m
+-rw-r--r--  1 root              adm               13737 nov.  16 09:40 [01;31mdmesg.2.gz[0m
+-rw-r--r--  1 root              adm               13708 nov.  16 17:43 [01;31mdmesg.1.gz[0m
+-rw-r--r--  1 root              adm               45921 nov.  16 18:40 dmesg.0
+-rw-r--r--  1 root              adm               45757 nov.  18 16:57 dmesg
+drwxr-xr-x  2 root              root               4096 nov.  16 17:29 [01;34mdist-upgrade[0m
+drwxr-xr-x  2 root              root               4096 nov.  18 16:57 [01;34mcups[0m
+-rw-rw----  1 root              utmp                  0 aug.  19 12:29 btmp
+-rw-r--r--  1 root              root             104003 aug.  19 12:30 bootstrap.log
+-rw-------  1 root              root             114430 nov.  13 16:37 boot.log.5
+-rw-------  1 root              root              19272 nov.  14 16:40 boot.log.4
+-rw-------  1 root              root              19358 nov.  15 16:33 boot.log.3
+-rw-------  1 root              root               9954 nov.  16 09:40 boot.log.2
+-rw-------  1 root              root              27155 nov.  18 16:57 boot.log.1
+-rw-------  1 root              root               3011 nov.  18 17:01 boot.log
+-rw-r-----  1 syslog            adm               52538 nov.  13 17:42 auth.log.1
+-rw-r-----  1 syslog            adm               39647 nov.  15 17:03 auth.log
+drwxr-xr-x  2 root              root               4096 nov.  16 17:29 [01;34mapt[0m
+-rw-r--r--  1 root              root              38923 aug.  19 12:43 alternatives.log
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-09[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-09[00m$ exit
+
+Script done on 2021-11-18 17:30:24+01:00 [COMMAND_EXIT_CODE="0"]

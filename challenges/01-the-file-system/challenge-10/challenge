@@ -1,0 +1,23 @@
+
+Challenge #10
+
+Notice and try to recognize all Linux file types by running ls -l, ls -F and file commands.
+
+Run the commands on the following files:
+
+/etc/passwd
+
+/var
+
+/vmlinuz
+
+/usr/bin/ls
+
+/dev/sda1
+
+/dev/tty1
+
+/run/initctl
+
+/run/snapd.socket
+

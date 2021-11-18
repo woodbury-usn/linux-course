@@ -1,0 +1,7 @@
+Challenge #7
+
+1.    Consider the file created in the previous challenge. Notice its timestamps and then update them to the system’s current date and time.
+
+2.    Change only the modification and change time to the current system time. See the change.
+
+3.    Change only the modification time manually to 1990, January 15, 10:30:55 AM.

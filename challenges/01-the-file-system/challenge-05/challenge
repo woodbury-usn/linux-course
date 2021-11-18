@@ -1,0 +1,7 @@
+Challenge #5
+
+1.    Display the contents of /var/log sorted by size in a human-readable format.
+
+2.    Rerun the previous command adding an option that omits the files that end in .log from listing.
+
+3.    List the contents of /etc recursively.

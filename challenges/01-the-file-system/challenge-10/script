@@ -1,0 +1,80 @@
+Script started on 2021-11-18 17:31:17+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="47"]
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ l s[K[Ks -F /etc/passwd
+/etc/passwd
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -F /etc/passwd[1P /etc/passwdl /etc/passwd
+-rw-r--r-- 1 root root 2907 nov.  16 09:47 /etc/passwd
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -l /etc/passwd[K[K[K[K[K[K[K[K[K[Kvar/
+total 48
+drwxr-xr-x  2 root root     4096 nov.  18 17:02 [0m[01;34mbackups[0m
+drwxr-xr-x 17 root root     4096 nov.   9 18:17 [01;34mcache[0m
+drwxrwsrwt  2 root whoopsie 4096 aug.  19 12:41 [30;42mcrash[0m
+drwxr-xr-x 70 root root     4096 nov.  14 17:32 [01;34mlib[0m
+drwxrwsr-x  2 root staff    4096 april 15  2020 [01;34mlocal[0m
+lrwxrwxrwx  1 root root        9 nov.   9 13:42 [01;36mlock[0m -> [30;42m/run/lock[0m
+drwxrwxr-x 13 root syslog   4096 nov.  18 16:57 [01;34mlog[0m
+drwxrwsr-x  2 root mail     4096 aug.  19 12:29 [01;34mmail[0m
+drwxrwsrwt  2 root whoopsie 4096 aug.  19 12:41 [30;42mmetrics[0m
+drwxr-xr-x  2 root root     4096 aug.  19 12:29 [01;34mopt[0m
+lrwxrwxrwx  1 root root        4 nov.   9 13:42 [01;36mrun[0m -> [01;34m/run[0m
+drwxr-xr-x 10 root root     4096 nov.   9 18:25 [01;34msnap[0m
+drwxr-xr-x  7 root root     4096 aug.  19 12:36 [01;34mspool[0m
+drwxrwxrwt 10 root root     4096 nov.  18 16:58 [30;42mtmp[0m
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -l /var/[1P /var/F /var/
+[0m[01;34mbackups[0m/  [01;34mcache[0m/  [30;42mcrash[0m/  [01;34mlib[0m/  [01;34mlocal[0m/  [01;36mlock[0m@  [01;34mlog[0m/  [01;34mmail[0m/  [30;42mmetrics[0m/  [01;34mopt[0m/  [01;36mrun[0m@  [01;34msnap[0m/  [01;34mspool[0m/  [30;42mtmp[0m/
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -F /var/[1@l
+total 48
+drwxr-xr-x  2 root root     4096 nov.  18 17:02 [0m[01;34mbackups[0m/
+drwxr-xr-x 17 root root     4096 nov.   9 18:17 [01;34mcache[0m/
+drwxrwsrwt  2 root whoopsie 4096 aug.  19 12:41 [30;42mcrash[0m/
+drwxr-xr-x 70 root root     4096 nov.  14 17:32 [01;34mlib[0m/
+drwxrwsr-x  2 root staff    4096 april 15  2020 [01;34mlocal[0m/
+lrwxrwxrwx  1 root root        9 nov.   9 13:42 [01;36mlock[0m -> [30;42m/run/lock[0m/
+drwxrwxr-x 13 root syslog   4096 nov.  18 16:57 [01;34mlog[0m/
+drwxrwsr-x  2 root mail     4096 aug.  19 12:29 [01;34mmail[0m/
+drwxrwsrwt  2 root whoopsie 4096 aug.  19 12:41 [30;42mmetrics[0m/
+drwxr-xr-x  2 root root     4096 aug.  19 12:29 [01;34mopt[0m/
+lrwxrwxrwx  1 root root        4 nov.   9 13:42 [01;36mrun[0m -> [01;34m/run[0m/
+drwxr-xr-x 10 root root     4096 nov.   9 18:25 [01;34msnap[0m/
+drwxr-xr-x  7 root root     4096 aug.  19 12:36 [01;34mspool[0m/
+drwxrwxrwt 10 root root     4096 nov.  18 16:58 [30;42mtmp[0m/
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -lF /var/[1P[Cl /var/
+total 48
+drwxr-xr-x  2 root root     4096 nov.  18 17:02 [0m[01;34mbackups[0m/
+drwxr-xr-x 17 root root     4096 nov.   9 18:17 [01;34mcache[0m/
+drwxrwsrwt  2 root whoopsie 4096 aug.  19 12:41 [30;42mcrash[0m/
+drwxr-xr-x 70 root root     4096 nov.  14 17:32 [01;34mlib[0m/
+drwxrwsr-x  2 root staff    4096 april 15  2020 [01;34mlocal[0m/
+lrwxrwxrwx  1 root root        9 nov.   9 13:42 [01;36mlock[0m -> [30;42m/run/lock[0m/
+drwxrwxr-x 13 root syslog   4096 nov.  18 16:57 [01;34mlog[0m/
+drwxrwsr-x  2 root mail     4096 aug.  19 12:29 [01;34mmail[0m/
+drwxrwsrwt  2 root whoopsie 4096 aug.  19 12:41 [30;42mmetrics[0m/
+drwxr-xr-x  2 root root     4096 aug.  19 12:29 [01;34mopt[0m/
+lrwxrwxrwx  1 root root        4 nov.   9 13:42 [01;36mrun[0m -> [01;34m/run[0m/
+drwxr-xr-x 10 root root     4096 nov.   9 18:25 [01;34msnap[0m/
+drwxr-xr-x  7 root root     4096 aug.  19 12:36 [01;34mspool[0m/
+drwxrwxrwt 10 root root     4096 nov.  18 16:58 [30;42mtmp[0m/
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ [H[2J]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -l /vmlinuz
+ls: cannot access '/vmlinuz': No such file or directory
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls ~/vm[K[K[K[K[K[K[Kls -l /usr/bin/ls
+-rwxr-xr-x 1 root root 142144 sep.   5  2019 [0m[01;32m/usr/bin/ls[0m
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -l /usr/bin/ls[1P /usr/bin/lsF /usr/bin/ls
+[0m[01;32m/usr/bin/ls[0m*
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -l /dev/sda1
+brw-rw---- 1 root disk 8, 1 nov.  18 16:57 [0m[40;33;01m/dev/sda1[0m
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -l /dev/sda1[1P /dev/sda1F /dev/sda1
+[0m[40;33;01m/dev/sda1[0m
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -F /dev/sda1[Kls /[K-d[Kl /dev/tty1
+crw--w---- 1 root tty 4, 1 nov.  18 16:57 [0m[40;33;01m/dev/tty1[0m
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -l /dev/tty1F /dev/sda1l /dev/tty1[1P /dev/tty1F /dev/tty1
+[0m[40;33;01m/dev/tty1[0m
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -l /run/initctl 
+prw------- 1 root root 0 nov.  18 16:57 [0m[40;33m/run/initctl[0m
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -l /run/initctl [1P[1@F
+[0m[40;33m/run/initctl[0m|
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -l /run/snapd.socket 
+srw-rw-rw- 1 root root 0 nov.  18 16:57 [0m[01;35m/run/snapd.socket[0m
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ ls -l /run/snapd.socket [1P[1@F
+[0m[01;35m/run/snapd.socket[0m=
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-10[00m$ exit
+
+Script done on 2021-11-18 17:34:08+01:00 [COMMAND_EXIT_CODE="0"]

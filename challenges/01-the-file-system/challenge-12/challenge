@@ -1,0 +1,9 @@
+Challenge #12
+
+1.    Display the contents of /etc/ssh/ssh_config page by page using less.
+
+2.    Go to the end and then to the beginning of the file using the right shortcuts.
+
+3.    Search forward for the string Ciphers
+
+4.    Quit less

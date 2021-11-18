@@ -1,0 +1,173 @@
+Script started on 2021-11-18 17:39:01+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="47"]
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[00m$ head -n 3 /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[00m$ tail æ[K-n 5 /etc/shadow
+tail: cannot open '/etc/shadow' for reading: Permission denied
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[00m$ sudo tail -n 5 /etc/shadow [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kw
+[sudo] password for madeleine: 
+sssd:*:18858:0:99999:7:::
+madeleine:$6$rKBfibFsbzlmhw24$R5bfL3QzZmTLE.9NjtVI9kIOdi1EwO8a9R0OJ6UQSerQQZD.rizmpuninP7Z11xyQEYmOl7m.BA4WX8kpgFCo0:18940:0:99999:7:::
+systemd-coredump:!!:18940::::::
+vboxadd:!:18940::::::
+sshd:*:18947:0:99999:7:::
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[00m$ tail /etc/group[C /etc/group- /etc/groupn /etc/group[C /etc/group+ /etc/group5 /etc/group
+adm:x:4:syslog,madeleine
+tty:x:5:syslog
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:madeleine
+floppy:x:25:
+tape:x:26:
+sudo:x:27:madeleine
+audio:x:29:pulse
+dip:x:30:madeleine
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:madeleine
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+systemd-timesync:x:104:
+crontab:x:105:
+messagebus:x:106:
+input:x:107:
+kvm:x:108:
+render:x:109:
+syslog:x:110:
+tss:x:111:
+bluetooth:x:112:
+ssl-cert:x:113:
+uuidd:x:114:
+tcpdump:x:115:
+avahi-autoipd:x:116:
+rtkit:x:117:
+ssh:x:118:
+netdev:x:119:
+lpadmin:x:120:madeleine
+avahi:x:121:
+scanner:x:122:saned
+saned:x:123:
+nm-openvpn:x:124:
+whoopsie:x:125:
+colord:x:126:
+geoclue:x:127:
+pulse:x:128:
+pulse-access:x:129:
+gdm:x:130:
+sssd:x:131:
+lxd:x:132:madeleine
+madeleine:x:1000:
+sambashare:x:133:madeleine
+systemd-coredump:x:999:
+vboxsf:x:998:
+mlocate:x:134:
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[00m$ ls -n /etc/group
+-rw-r--r-- 1 0 0 1125 nov.  14 17:32 /etc/group
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[00m$ ls -n /etc/group[C[1P /etc/groupl /etc/group
+-rw-r--r-- 1 root root 1125 nov.  14 17:32 /etc/group
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[00m$ ls -l /etc/group/
+ls: cannot access '/etc/group/': Not a directory
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[00m$ cat -n /etc/group
+     1	root:x:0:
+     2	daemon:x:1:
+     3	bin:x:2:
+     4	sys:x:3:
+     5	adm:x:4:syslog,madeleine
+     6	tty:x:5:syslog
+     7	disk:x:6:
+     8	lp:x:7:
+     9	mail:x:8:
+    10	news:x:9:
+    11	uucp:x:10:
+    12	man:x:12:
+    13	proxy:x:13:
+    14	kmem:x:15:
+    15	dialout:x:20:
+    16	fax:x:21:
+    17	voice:x:22:
+    18	cdrom:x:24:madeleine
+    19	floppy:x:25:
+    20	tape:x:26:
+    21	sudo:x:27:madeleine
+    22	audio:x:29:pulse
+    23	dip:x:30:madeleine
+    24	www-data:x:33:
+    25	backup:x:34:
+    26	operator:x:37:
+    27	list:x:38:
+    28	irc:x:39:
+    29	src:x:40:
+    30	gnats:x:41:
+    31	shadow:x:42:
+    32	utmp:x:43:
+    33	video:x:44:
+    34	sasl:x:45:
+    35	plugdev:x:46:madeleine
+    36	staff:x:50:
+    37	games:x:60:
+    38	users:x:100:
+    39	nogroup:x:65534:
+    40	systemd-journal:x:101:
+    41	systemd-network:x:102:
+    42	systemd-resolve:x:103:
+    43	systemd-timesync:x:104:
+    44	crontab:x:105:
+    45	messagebus:x:106:
+    46	input:x:107:
+    47	kvm:x:108:
+    48	render:x:109:
+    49	syslog:x:110:
+    50	tss:x:111:
+    51	bluetooth:x:112:
+    52	ssl-cert:x:113:
+    53	uuidd:x:114:
+    54	tcpdump:x:115:
+    55	avahi-autoipd:x:116:
+    56	rtkit:x:117:
+    57	ssh:x:118:
+    58	netdev:x:119:
+    59	lpadmin:x:120:madeleine
+    60	avahi:x:121:
+    61	scanner:x:122:saned
+    62	saned:x:123:
+    63	nm-openvpn:x:124:
+    64	whoopsie:x:125:
+    65	colord:x:126:
+    66	geoclue:x:127:
+    67	pulse:x:128:
+    68	pulse-access:x:129:
+    69	gdm:x:130:
+    70	sssd:x:131:
+    71	lxd:x:132:madeleine
+    72	madeleine:x:1000:
+    73	sambashare:x:133:madeleine
+    74	systemd-coredump:x:999:
+    75	vboxsf:x:998:
+    76	mlocate:x:134:
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-13[00m$ exit
+
+Script done on 2021-11-18 17:42:22+01:00 [COMMAND_EXIT_CODE="0"]
