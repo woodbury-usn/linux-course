@@ -1,0 +1,96 @@
+Script started on 2021-11-19 19:15:14+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="47"]
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-18[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-18[00m$ [H[2J]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-18[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-18[00m$ who > user.txt
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-18[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-18[00m$ ls
+challenge  script  time  user.txt
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-18[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-18[00m$ rm user.txt 
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-18[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-18[00m$ cd
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ls
+bah      [0m[01;34mDocuments[0m  [01;34metc[0m      [01;31metc.tar.gz[0m  [01;34mMusic[0m     [01;34mprojects[0m  script  [01;34mTemplates[0m  [01;34mVideos[0m
+[01;34mDesktop[0m  [01;34mDownloads[0m  [01;31metc.tar[0m  linux.txt   [01;34mPictures[0m  [01;34mPublic[0m    [01;34msnap[0m    time
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ lscdrm user.txt ls[Kwho > user.txt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ls
+bah      [0m[01;34mDocuments[0m  [01;34metc[0m      [01;31metc.tar.gz[0m  [01;34mMusic[0m     [01;34mprojects[0m  script  [01;34mTemplates[0m  user.txt
+[01;34mDesktop[0m  [01;34mDownloads[0m  [01;31metc.tar[0m  linux.txt   [01;34mPictures[0m  [01;34mPublic[0m    [01;34msnap[0m    time       [01;34mVideos[0m
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ cat user.txt 
+madeleine :0           2021-11-19 18:24 (:0)
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ mkdir mydir
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ls
+bah      [0m[01;34mDocuments[0m  [01;34metc[0m      [01;31metc.tar.gz[0m  [01;34mMusic[0m  [01;34mPictures[0m  [01;34mPublic[0m  [01;34msnap[0m       time      [01;34mVideos[0m
+[01;34mDesktop[0m  [01;34mDownloads[0m  [01;31metc.tar[0m  linux.txt   [01;34mmydir[0m  [01;34mprojects[0m  script  [01;34mTemplates[0m  user.txt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ln a.txt[K[K[K[K[Kuser.txt a.txt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ln user.txt mydir/b.txt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ls .li . mydir/
+ls: cannot access '.li': No such file or directory
+.:
+a.txt  [0m[01;34mDesktop[0m    [01;34mDownloads[0m  [01;31metc.tar[0m     linux.txt  [01;34mmydir[0m     [01;34mprojects[0m  script  [01;34mTemplates[0m  user.txt
+bah    [01;34mDocuments[0m  [01;34metc[0m        [01;31metc.tar.gz[0m  [01;34mMusic[0m      [01;34mPictures[0m  [01;34mPublic[0m    [01;34msnap[0m    time       [01;34mVideos[0m
+
+mydir/:
+b.txt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ls .li . mydir/[1P[1@-
+.:
+total 8372
+ 950961 -rw-rw-r--   3 madeleine madeleine      45 nov.  19 19:16 a.txt
+ 949488 -rw-rw-r--   1 madeleine madeleine     650 nov.  16 18:28 bah
+1196249 drwxr-xr-x   3 madeleine madeleine    4096 nov.  19 19:10 [0m[01;34mDesktop[0m
+ 266626 drwxr-xr-x   5 madeleine madeleine    4096 nov.  16 18:04 [01;34mDocuments[0m
+1196250 drwxr-xr-x   2 madeleine madeleine    4096 nov.   9 18:14 [01;34mDownloads[0m
+ 398505 drwxr-xr-x 130 madeleine madeleine   12288 nov.  18 17:37 [01;34metc[0m
+ 950925 -rw-r--r--   1 root      root      7229440 nov.  19 19:04 [01;31metc.tar[0m
+ 950932 -rw-r--r--   1 root      root      1261780 nov.  19 19:08 [01;31metc.tar.gz[0m
+ 950758 -rw-rw-r--   1 madeleine madeleine       0 nov.  16 09:47 linux.txt
+ 266627 drwxr-xr-x   2 madeleine madeleine    4096 nov.   9 13:48 [01;34mMusic[0m
+ 545728 drwxrwxr-x   2 madeleine madeleine    4096 nov.  19 19:17 [01;34mmydir[0m
+ 266628 drwxr-xr-x   2 madeleine madeleine    4096 nov.  13 17:21 [01;34mPictures[0m
+ 396041 drwxrwxr-x   2 madeleine madeleine    4096 nov.  16 17:30 [01;34mprojects[0m
+ 266625 drwxr-xr-x   2 madeleine madeleine    4096 nov.   9 13:48 [01;34mPublic[0m
+ 947465 -rw-rw-r--   1 madeleine madeleine     575 nov.  16 18:29 script
+ 942179 drwx------   4 madeleine madeleine    4096 nov.  12 16:57 [01;34msnap[0m
+1196258 drwxr-xr-x   2 madeleine madeleine    4096 nov.   9 13:48 [01;34mTemplates[0m
+ 949852 -rw-rw-r--   1 madeleine madeleine      70 nov.  16 18:29 time
+ 950961 -rw-rw-r--   3 madeleine madeleine      45 nov.  19 19:16 user.txt
+ 266629 drwxr-xr-x   2 madeleine madeleine    4096 nov.   9 13:48 [01;34mVideos[0m
+
+mydir/:
+total 4
+950961 -rw-rw-r-- 3 madeleine madeleine 45 nov.  19 19:16 b.txt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ [H[2J]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ls -li user.txt /[K&& ls -li mydir/
+950961 -rw-rw-r-- 3 madeleine madeleine 45 nov.  19 19:16 user.txt
+total 4
+950961 -rw-rw-r-- 3 madeleine madeleine 45 nov.  19 19:16 b.txt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ln -s user.txt sym.txt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ls
+a.txt    [0m[01;34mDocuments[0m  [01;31metc.tar[0m     [01;34mMusic[0m     [01;34mprojects[0m  [01;34msnap[0m       time
+bah      [01;34mDownloads[0m  [01;31metc.tar.gz[0m  [01;34mmydir[0m     [01;34mPublic[0m    [01;36msym.txt[0m    user.txt
+[01;34mDesktop[0m  [01;34metc[0m        linux.txt   [01;34mPictures[0m  script    [01;34mTemplates[0m  [01;34mVideos[0m
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ls -li sym.txt 
+950959 lrwxrwxrwx 1 madeleine madeleine 8 nov.  19 19:18 [0m[01;36msym.txt[0m -> user.txt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ rm user.txt 
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ rm user.txt [3@ls -li sym[C[C[C[C[C[K[K[K[K[K[K[K[K
+total 8368
+ 950961 -rw-rw-r--   2 madeleine madeleine      45 nov.  19 19:16 a.txt
+ 949488 -rw-rw-r--   1 madeleine madeleine     650 nov.  16 18:28 bah
+1196249 drwxr-xr-x   3 madeleine madeleine    4096 nov.  19 19:10 [0m[01;34mDesktop[0m
+ 266626 drwxr-xr-x   5 madeleine madeleine    4096 nov.  16 18:04 [01;34mDocuments[0m
+1196250 drwxr-xr-x   2 madeleine madeleine    4096 nov.   9 18:14 [01;34mDownloads[0m
+ 398505 drwxr-xr-x 130 madeleine madeleine   12288 nov.  18 17:37 [01;34metc[0m
+ 950925 -rw-r--r--   1 root      root      7229440 nov.  19 19:04 [01;31metc.tar[0m
+ 950932 -rw-r--r--   1 root      root      1261780 nov.  19 19:08 [01;31metc.tar.gz[0m
+ 950758 -rw-rw-r--   1 madeleine madeleine       0 nov.  16 09:47 linux.txt
+ 266627 drwxr-xr-x   2 madeleine madeleine    4096 nov.   9 13:48 [01;34mMusic[0m
+ 545728 drwxrwxr-x   2 madeleine madeleine    4096 nov.  19 19:17 [01;34mmydir[0m
+ 266628 drwxr-xr-x   2 madeleine madeleine    4096 nov.  13 17:21 [01;34mPictures[0m
+ 396041 drwxrwxr-x   2 madeleine madeleine    4096 nov.  16 17:30 [01;34mprojects[0m
+ 266625 drwxr-xr-x   2 madeleine madeleine    4096 nov.   9 13:48 [01;34mPublic[0m
+ 947465 -rw-rw-r--   1 madeleine madeleine     575 nov.  16 18:29 script
+ 942179 drwx------   4 madeleine madeleine    4096 nov.  12 16:57 [01;34msnap[0m
+ 950959 lrwxrwxrwx   1 madeleine madeleine       8 nov.  19 19:18 [40;31;01msym.txt[0m -> [40;31;01muser.txt[0m
+1196258 drwxr-xr-x   2 madeleine madeleine    4096 nov.   9 13:48 [01;34mTemplates[0m
+ 949852 -rw-rw-r--   1 madeleine madeleine      70 nov.  16 18:29 time
+ 266629 drwxr-xr-x   2 madeleine madeleine    4096 nov.   9 13:48 [01;34mVideos[0m
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ls -li mydir/
+total 4
+950961 -rw-rw-r-- 2 madeleine madeleine 45 nov.  19 19:16 b.txt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ exit
+
+Script done on 2021-11-19 19:18:53+01:00 [COMMAND_EXIT_CODE="0"]

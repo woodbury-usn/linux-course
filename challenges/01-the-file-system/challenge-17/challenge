@@ -1,0 +1,16 @@
+Challenge #17
+
+1.
+    a) Using tar, create an archive of /etc in the current directory.
+
+    b) Display the contents of the archive searching for a specific file in the archive.
+
+    c) Extract the archive in the current directory.
+
+2. 
+    a) Using tar, create a compressed archive of /etc using gzip in the current directory.
+
+    b) Display the contents of the archive searching for a specific file in the archive.
+
+    c) Extract the archive in another directory.
+

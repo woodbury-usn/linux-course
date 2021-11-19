@@ -1,0 +1,9 @@
+Challenge #18
+
+1.    Create a file using a command redirection and a directory.
+
+2.    Create 2 hard links to the file. Check the no. of hard links.
+
+3.    Create a symlink to the initial file. Check the symlink.
+
+4.    Delete the initial file and see what happens with the other 2 hard links and with the symlink.
