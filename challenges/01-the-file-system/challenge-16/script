@@ -1,0 +1,764 @@
+Script started on 2021-11-19 18:46:10+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="47"]
+]0;madeleine@madeleine-VirtualBox: ~/Documents/Linux-course/challenges/01-the-file-system/challenge-16[01;32mmadeleine:[01;34m~/Documents/Linux-course/challenges/01-the-file-system/challenge-16[00m$ cd
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ mkdir linux && cd[K[Kmkdir linux/centor[Ks && mkdir linux/ubuntu
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ touch linux/centos/commands linux/centos/security.txt. linux/centos/security.txtt linux/centos/security.txtx linux/centos/security.txtt linux/centos/security.txt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ mkdir linux/centos/updates
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ touch linux/centos/updates/latest &&[K[Klinux/ubuntu/apt.txt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ tree linux
+[01;34mlinux[00m
+├── [01;34mcentos[00m
+│   ├── commands.txt
+│   ├── security.txt
+│   └── [01;34mupdates[00m
+│       └── latest
+└── [01;34mubuntu[00m
+    └── apt.txt
+
+3 directories, 4 files
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ cp linux/centos/security.txt linux/centos/updates/
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ cp linux/centos/security.txt linux/centos/updates/[C[C[C[C[C[C[C[C[C[C[C[C[Ctree linux[K
+[01;34mlinux[00m
+├── [01;34mcentos[00m
+│   ├── commands.txt
+│   ├── security.txt
+│   └── [01;34mupdates[00m
+│       ├── latest
+│       └── security.txt
+└── [01;34mubuntu[00m
+    └── apt.txt
+
+3 directories, 5 files
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ rm -i linux/centos/updates/security.txt 
+rm: remove regular empty file 'linux/centos/updates/security.txt'? y
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ rm -i linux/centos/updates/security.txt [C[C[C[C[C[C[C[C[C[C[C[C[Ctree linux[K
+[01;34mlinux[00m
+├── [01;34mcentos[00m
+│   ├── commands.txt
+│   ├── security.txt
+│   └── [01;34mupdates[00m
+│       └── latest
+└── [01;34mubuntu[00m
+    └── apt.txt
+
+3 directories, 4 files
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ [H[2J]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ cp linux/centos/ [Kupdates/ linux/ubuntu/
+cp: -r not specified; omitting directory 'linux/centos/updates/'
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ man co[Kp
+[?1049h[22;0;0t[?1h=CP(1)                                        User Commands                                       CP(1)[m
+[m
+[1mNAME[0m[m
+       cp - copy files and directories[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mcp[0m [[4mOPTION[24m]... [[4m-T[24m] [4mSOURCE[24m [4mDEST[24m[m
+       [1mcp[0m [[4mOPTION[24m]... [4mSOURCE[24m... [4mDIRECTORY[24m[m
+       [1mcp[0m [[4mOPTION[24m]... [4m-t[24m [4mDIRECTORY[24m [4mSOURCE[24m...[m
+[m
+[1mDESCRIPTION[0m[m
+       Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.[m
+[m
+       Mandatory arguments to long options are mandatory for short options too.[m
+[m
+       [1m-a[0m, [1m--archive[0m[m
+              same as [1m-dR[0m [1m--preserve[0m=[4mall[24m[m
+[m
+       [1m--attributes-only[0m[m
+              don't copy the file data, just the attributes[m
+[m
+       [1m--backup[0m[=[4mCONTROL[24m][m
+              make a backup of each existing destination file[m
+[m
+       [1m-b[0m     like [1m--backup[0m but does not accept an argument[m
+[m
+       [1m--copy-contents[0m[m
+              copy contents of special files when recursive[m
+[m
+       [1m-d[0m     same as [1m--no-dereference[0m [1m--preserve[0m=[4mlinks[24m[m
+[m
+       [1m-f[0m, [1m--force[0m[m
+              if  an  existing destination file cannot be opened, remove it and try again (this option[m
+              is ignored when the [1m-n[0m option is also used)[m
+[m
+       [1m-i[0m, [1m--interactive[0m[m
+              prompt before overwrite (overrides a previous [1m-n[0m option)[m
+[m
+       [1m-H[0m     follow command-line symbolic links in SOURCE[m
+[m
+       [1m-l[0m, [1m--link[0m[m
+              hard link files instead of copying[m
+[m
+       [1m-L[0m, [1m--dereference[0m[m
+              always follow symbolic links in SOURCE[m
+[m
+[7m Manual page cp(1) line 1 (press h for help or q to quit)[27m[K[K[7m Manual page cp(1) line 1 (press h for help or q to quit)[27m[K[K/[Kdd[Kii[Krr[Kee[Kcc[Ktt[Koo[Krr[Kyy[K[1;1HCP(1)                                        User Commands                                       CP(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       cp - copy files and directories[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mcp[0m [[4mOPTION[24m]... [[4m-T[24m] [4mSOURCE[24m [4mDEST[24m[m
+[8;1H       [1mcp[0m [[4mOPTION[24m]... [4mSOURCE[24m... [4mDIRECTORY[24m[m
+[9;1H       [1mcp[0m [[4mOPTION[24m]... [4m-t[24m [4mDIRECTORY[24m [4mSOURCE[24m...[m
+[10;1H[m
+[11;1H[1mDESCRIPTION[0m[m
+[12;1H       Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.[m
+[13;1H[m
+[14;1H       Mandatory arguments to long options are mandatory for short options too.[m
+[15;1H[m
+[16;1H       [1m-a[0m, [1m--archive[0m[m
+[17;1H              same as [1m-dR[0m [1m--preserve[0m=[4mall[24m[m
+[18;1H[m
+[19;1H       [1m--attributes-only[0m[m
+[20;1H              don't copy the file data, just the attributes[m
+[21;1H[m
+[22;1H       [1m--backup[0m[=[4mCONTROL[24m][m
+[23;1H              make a backup of each existing destination file[m
+[24;1H[m
+[25;1H       [1m-b[0m     like [1m--backup[0m but does not accept an argument[m
+[26;1H[m
+[27;1H       [1m--copy-contents[0m[m
+[28;1H              copy contents of special files when recursive[m
+[29;1H[m
+[30;1H       [1m-d[0m     same as [1m--no-dereference[0m [1m--preserve[0m=[4mlinks[24m[m
+[31;1H[m
+[32;1H       [1m-f[0m, [1m--force[0m[m
+[33;1H              if  an  existing destination file cannot be opened, remove it and try again (this option[m
+[34;1H              is ignored when the [1m-n[0m option is also used)[m
+[35;1H[m
+[36;1H       [1m-i[0m, [1m--interactive[0m[m
+[37;1H              prompt before overwrite (overrides a previous [1m-n[0m option)[m
+[38;1H[m
+[39;1H       [1m-H[0m     follow command-line symbolic links in SOURCE[m
+[40;1H[m
+[41;1H       [1m-l[0m, [1m--link[0m[m
+[42;1H              hard link files instead of copying[m
+[43;1H[m
+[44;1H       [1m-L[0m, [1m--dereference[0m[m
+[45;1H              always follow symbolic links in SOURCE[m
+[46;1H[m
+[47;1H[1;1HCP(1)                                        User Commands                                       CP(1)[m
+[2;1H[m
+[3;1H[1mNAME[0m[m
+[4;1H       cp - copy files and directories[m
+[5;1H[m
+[6;1H[1mSYNOPSIS[0m[m
+[7;1H       [1mcp[0m [[4mOPTION[24m]... [[4m-T[24m] [4mSOURCE[24m [4mDEST[24m[m
+[8;1H       [1mcp[0m [[4mOPTION[24m]... [4mSOURCE[24m... [4m[7mDIRECTORY[27m[24m[m
+[9;1H       [1mcp[0m [[4mOPTION[24m]... [4m-t[24m [4m[7mDIRECTORY[27m[24m [4mSOURCE[24m...[m
+[10;1H[m
+[11;1H[1mDESCRIPTION[0m[m
+[12;1H       Copy SOURCE to DEST, or multiple SOURCE(s) to [7mDIRECTORY[27m.[m
+[13;1H[m
+[14;1H       Mandatory arguments to long options are mandatory for short options too.[m
+[15;1H[m
+[16;1H       [1m-a[0m, [1m--archive[0m[m
+[17;1H              same as [1m-dR[0m [1m--preserve[0m=[4mall[24m[m
+[18;1H[m
+[19;1H       [1m--attributes-only[0m[m
+[20;1H              don't copy the file data, just the attributes[m
+[21;1H[m
+[22;1H       [1m--backup[0m[=[4mCONTROL[24m][m
+[23;1H              make a backup of each existing destination file[m
+[24;1H[m
+[25;1H       [1m-b[0m     like [1m--backup[0m but does not accept an argument[m
+[26;1H[m
+[27;1H       [1m--copy-contents[0m[m
+[28;1H              copy contents of special files when recursive[m
+[29;1H[m
+[30;1H       [1m-d[0m     same as [1m--no-dereference[0m [1m--preserve[0m=[4mlinks[24m[m
+[31;1H[m
+[32;1H       [1m-f[0m, [1m--force[0m[m
+[33;1H              if  an  existing destination file cannot be opened, remove it and try again (this option[m
+[34;1H              is ignored when the [1m-n[0m option is also used)[m
+[35;1H[m
+[36;1H       [1m-i[0m, [1m--interactive[0m[m
+[37;1H              prompt before overwrite (overrides a previous [1m-n[0m option)[m
+[38;1H[m
+[39;1H       [1m-H[0m     follow command-line symbolic links in SOURCE[m
+[40;1H[m
+[41;1H       [1m-l[0m, [1m--link[0m[m
+[42;1H              hard link files instead of copying[m
+[43;1H[m
+[44;1H       [1m-L[0m, [1m--dereference[0m[m
+[45;1H              always follow symbolic links in SOURCE[m
+[46;1H[m
+[47;1H       [1m-n[0m, [1m--no-clobber[0m[m
+              do not overwrite an existing file (overrides a previous [1m-i[0m option)[m
+[m
+       [1m-P[0m, [1m--no-dereference[0m[m
+              never follow symbolic links in SOURCE[m
+[m
+       [1m-p[0m     same as [1m--preserve[0m=[4mmode[24m,ownership,timestamps[m
+[7m Manual page cp(1) line 8/159 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 9/159 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mcp[0m [[4mOPTION[24m]... [4mSOURCE[24m... [4m[7mDIRECTORY[27m[24m[m
+[47;1H[K[7m Manual page cp(1) line 8/159 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mcp[0m [[4mOPTION[24m]... [[4m-T[24m] [4mSOURCE[24m [4mDEST[24m[m
+[47;1H[K[7m Manual page cp(1) line 7/159 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mSYNOPSIS[0m[m
+[47;1H[K[7m Manual page cp(1) line 6/159 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 5/159 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       cp - copy files and directories[m
+[47;1H[K[7m Manual page cp(1) line 4/159 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mNAME[0m[m
+[47;1H[K[7m Manual page cp(1) line 3/159 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 2/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HMCP(1)                                        User Commands                                       CP(1)[m
+[47;1H[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-n[0m, [1m--no-clobber[0m[m
+[7m Manual page cp(1) line 2/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not overwrite an existing file (overrides a previous [1m-i[0m option)[m
+[7m Manual page cp(1) line 3/159 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 4/159 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-P[0m, [1m--no-dereference[0m[m
+[7m Manual page cp(1) line 5/159 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              never follow symbolic links in SOURCE[m
+[7m Manual page cp(1) line 6/159 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 7/159 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-p[0m     same as [1m--preserve[0m=[4mmode[24m,ownership,timestamps[m
+[7m Manual page cp(1) line 8/159 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 9/159 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--preserve[0m[=[4mATTR_LIST[24m][m
+[7m Manual page cp(1) line 10/159 32% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              preserve the specified attributes (default: mode,ownership,timestamps), if possible  ad‐[m
+[7m Manual page cp(1) line 11/159 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ditional attributes: context, links, xattr, all[m
+[7m Manual page cp(1) line 12/159 35% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 13/159 35% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--no-preserve[0m=[4mATTR_LIST[24m[m
+[7m Manual page cp(1) line 14/159 36% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              don't preserve the specified attributes[m
+[7m Manual page cp(1) line 15/159 37% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 16/159 37% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--parents[0m[m
+[7m Manual page cp(1) line 17/159 37% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              use full source file name under [7mDIRECTORY[27m[m
+[7m Manual page cp(1) line 18/159 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 19/159 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-R[0m, [1m-r[0m, [1m--recursive[0m[m
+[7m Manual page cp(1) line 20/159 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              copy directories recursively[m
+[7m Manual page cp(1) line 21/159 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 22/159 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--reflink[0m[=[4mWHEN[24m][m
+[7m Manual page cp(1) line 23/159 40% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              control clone/CoW copies. See below[m
+[7m Manual page cp(1) line 24/159 41% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 25/159 41% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--remove-destination[0m[m
+[7m Manual page cp(1) line 26/159 42% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              remove  each  existing  destination  file  before  attempting  to open it (contrast with[m
+[7m Manual page cp(1) line 27/159 43% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m--force[0m)[m
+[7m Manual page cp(1) line 28/159 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 29/159 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--sparse[0m=[4mWHEN[24m[m
+[7m Manual page cp(1) line 30/159 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              control creation of sparse files. See below[m
+[7m Manual page cp(1) line 31/159 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 32/159 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--strip-trailing-slashes[0m[m
+[7m Manual page cp(1) line 33/159 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              remove any trailing slashes from each SOURCE argument[m
+[7m Manual page cp(1) line 34/159 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 35/159 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-s[0m, [1m--symbolic-link[0m[m
+[7m Manual page cp(1) line 36/159 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              make symbolic links instead of copying[m
+[7m Manual page cp(1) line 37/159 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 38/159 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-S[0m, [1m--suffix[0m=[4mSUFFIX[24m[m
+[7m Manual page cp(1) line 39/159 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              override the usual backup suffix[m
+[7m Manual page cp(1) line 40/159 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 41/159 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-t[0m, [1m--target-[0m[1m[7mdirectory[27m[0m=[4m[7mDIRECTORY[27m[24m[m
+[7m Manual page cp(1) line 42/159 52% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              copy all SOURCE arguments into [7mDIRECTORY[27m[m
+[7m Manual page cp(1) line 43/159 52% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 44/159 52% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-T[0m, [1m--no-target-[0m[1m[7mdirectory[27m[0m[m
+[7m Manual page cp(1) line 45/159 54% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              treat DEST as a normal file[m
+[7m Manual page cp(1) line 46/159 54% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 47/159 54% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-u[0m, [1m--update[0m[m
+[7m Manual page cp(1) line 48/159 55% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              copy only when the SOURCE file is newer than the destination file or when  the  destina‐[m
+[7m Manual page cp(1) line 49/159 56% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tion file is missing[m
+[7m Manual page cp(1) line 50/159 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 51/159 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-v[0m, [1m--verbose[0m[m
+[7m Manual page cp(1) line 52/159 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              explain what is being done[m
+[7m Manual page cp(1) line 53/159 58% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 54/159 58% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-x[0m, [1m--one-file-system[0m[m
+[7m Manual page cp(1) line 55/159 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              stay on this file system[m
+[7m Manual page cp(1) line 56/159 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 57/159 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-Z[0m     set SELinux security context of destination file to default type[m
+[7m Manual page cp(1) line 58/159 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 59/159 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--context[0m[=[4mCTX[24m][m
+[7m Manual page cp(1) line 60/159 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              like [1m-Z[0m, or if CTX is specified then set the SELinux or SMACK security context to CTX[m
+[7m Manual page cp(1) line 61/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 62/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--help[0m display this help and exit[m
+[7m Manual page cp(1) line 63/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 64/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--version[0m[m
+[7m Manual page cp(1) line 65/159 64% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              output version information and exit[m
+[7m Manual page cp(1) line 66/159 65% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-R[0m, [1m-r[0m, [1m--recursive[0m[m
+[47;1H[K[7m Manual page cp(1) line 65/159 64% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 64/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              use full source file name under [7mDIRECTORY[27m[m
+[47;1H[K[7m Manual page cp(1) line 63/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--parents[0m[m
+[47;1H[K[7m Manual page cp(1) line 62/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 61/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              don't preserve the specified attributes[m
+[47;1H[K[7m Manual page cp(1) line 60/159 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--no-preserve[0m=[4mATTR_LIST[24m[m
+[47;1H[K[7m Manual page cp(1) line 59/159 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 58/159 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              ditional attributes: context, links, xattr, all[m
+[47;1H[K[7m Manual page cp(1) line 57/159 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              preserve the specified attributes (default: mode,ownership,timestamps), if possible  ad‐[m
+[47;1H[K[7m Manual page cp(1) line 56/159 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--preserve[0m[=[4mATTR_LIST[24m][m
+[47;1H[K[7m Manual page cp(1) line 55/159 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 54/159 58% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-p[0m     same as [1m--preserve[0m=[4mmode[24m,ownership,timestamps[m
+[47;1H[K[7m Manual page cp(1) line 53/159 58% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 52/159 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              never follow symbolic links in SOURCE[m
+[47;1H[K[7m Manual page cp(1) line 51/159 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-P[0m, [1m--no-dereference[0m[m
+[47;1H[K[7m Manual page cp(1) line 50/159 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 49/159 56% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              do not overwrite an existing file (overrides a previous [1m-i[0m option)[m
+[47;1H[K[7m Manual page cp(1) line 48/159 55% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-n[0m, [1m--no-clobber[0m[m
+[47;1H[K[7m Manual page cp(1) line 47/159 54% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 46/159 54% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              always follow symbolic links in SOURCE[m
+[47;1H[K[7m Manual page cp(1) line 45/159 54% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-L[0m, [1m--dereference[0m[m
+[47;1H[K[7m Manual page cp(1) line 44/159 52% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 43/159 52% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              hard link files instead of copying[m
+[47;1H[K[7m Manual page cp(1) line 42/159 52% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-l[0m, [1m--link[0m[m
+[47;1H[K[7m Manual page cp(1) line 41/159 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 40/159 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-H[0m     follow command-line symbolic links in SOURCE[m
+[47;1H[K[7m Manual page cp(1) line 39/159 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 38/159 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              prompt before overwrite (overrides a previous [1m-n[0m option)[m
+[47;1H[K[7m Manual page cp(1) line 37/159 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-i[0m, [1m--interactive[0m[m
+[47;1H[K[7m Manual page cp(1) line 36/159 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 35/159 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              is ignored when the [1m-n[0m option is also used)[m
+[47;1H[K[7m Manual page cp(1) line 34/159 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              if  an  existing destination file cannot be opened, remove it and try again (this option[m
+[47;1H[K[7m Manual page cp(1) line 33/159 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-f[0m, [1m--force[0m[m
+[47;1H[K[7m Manual page cp(1) line 32/159 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 31/159 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-d[0m     same as [1m--no-dereference[0m [1m--preserve[0m=[4mlinks[24m[m
+[47;1H[K[7m Manual page cp(1) line 30/159 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 29/159 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              copy contents of special files when recursive[m
+[47;1H[K[7m Manual page cp(1) line 28/159 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--copy-contents[0m[m
+[47;1H[K[7m Manual page cp(1) line 27/159 43% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 26/159 42% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-b[0m     like [1m--backup[0m but does not accept an argument[m
+[47;1H[K[7m Manual page cp(1) line 25/159 41% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 24/159 41% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              make a backup of each existing destination file[m
+[47;1H[K[7m Manual page cp(1) line 23/159 40% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--backup[0m[=[4mCONTROL[24m][m
+[47;1H[K[7m Manual page cp(1) line 22/159 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 21/159 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              don't copy the file data, just the attributes[m
+[47;1H[K[7m Manual page cp(1) line 20/159 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--attributes-only[0m[m
+[47;1H[K[7m Manual page cp(1) line 19/159 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 18/159 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              same as [1m-dR[0m [1m--preserve[0m=[4mall[24m[m
+[47;1H[K[7m Manual page cp(1) line 17/159 37% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-a[0m, [1m--archive[0m[m
+[47;1H[K[7m Manual page cp(1) line 16/159 37% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 15/159 37% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Mandatory arguments to long options are mandatory for short options too.[m
+[47;1H[K[7m Manual page cp(1) line 14/159 36% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 13/159 35% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Copy SOURCE to DEST, or multiple SOURCE(s) to [7mDIRECTORY[27m.[m
+[47;1H[K[7m Manual page cp(1) line 12/159 35% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mDESCRIPTION[0m[m
+[47;1H[K[7m Manual page cp(1) line 11/159 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 10/159 32% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mcp[0m [[4mOPTION[24m]... [4m-t[24m [4m[7mDIRECTORY[27m[24m [4mSOURCE[24m...[m
+[47;1H[K[7m Manual page cp(1) line 9/159 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mcp[0m [[4mOPTION[24m]... [4mSOURCE[24m... [4m[7mDIRECTORY[27m[24m[m
+[47;1H[K[7m Manual page cp(1) line 8/159 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mcp[0m [[4mOPTION[24m]... [[4m-T[24m] [4mSOURCE[24m [4mDEST[24m[m
+[47;1H[K[7m Manual page cp(1) line 7/159 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mSYNOPSIS[0m[m
+[47;1H[K[7m Manual page cp(1) line 6/159 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 5/159 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       cp - copy files and directories[m
+[47;1H[K[7m Manual page cp(1) line 4/159 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mNAME[0m[m
+[47;1H[K[7m Manual page cp(1) line 3/159 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 2/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HMCP(1)                                        User Commands                                       CP(1)[m
+[47;1H[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page cp(1) line 1/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-n[0m, [1m--no-clobber[0m[m
+[7m Manual page cp(1) line 2/159 27% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              do not overwrite an existing file (overrides a previous [1m-i[0m option)[m
+[7m Manual page cp(1) line 3/159 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 4/159 28% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-P[0m, [1m--no-dereference[0m[m
+[7m Manual page cp(1) line 5/159 29% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              never follow symbolic links in SOURCE[m
+[7m Manual page cp(1) line 6/159 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 7/159 30% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-p[0m     same as [1m--preserve[0m=[4mmode[24m,ownership,timestamps[m
+[7m Manual page cp(1) line 8/159 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 9/159 31% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--preserve[0m[=[4mATTR_LIST[24m][m
+[7m Manual page cp(1) line 10/159 32% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              preserve the specified attributes (default: mode,ownership,timestamps), if possible  ad‐[m
+[7m Manual page cp(1) line 11/159 34% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ditional attributes: context, links, xattr, all[m
+[7m Manual page cp(1) line 12/159 35% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 13/159 35% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--no-preserve[0m=[4mATTR_LIST[24m[m
+[7m Manual page cp(1) line 14/159 36% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              don't preserve the specified attributes[m
+[7m Manual page cp(1) line 15/159 37% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 16/159 37% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--parents[0m[m
+[7m Manual page cp(1) line 17/159 37% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              use full source file name under [7mDIRECTORY[27m[m
+[7m Manual page cp(1) line 18/159 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 19/159 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-R[0m, [1m-r[0m, [1m--recursive[0m[m
+[7m Manual page cp(1) line 20/159 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              copy directories recursively[m
+[7m Manual page cp(1) line 21/159 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 22/159 39% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--reflink[0m[=[4mWHEN[24m][m
+[7m Manual page cp(1) line 23/159 40% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              control clone/CoW copies. See below[m
+[7m Manual page cp(1) line 24/159 41% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 25/159 41% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--remove-destination[0m[m
+[7m Manual page cp(1) line 26/159 42% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              remove  each  existing  destination  file  before  attempting  to open it (contrast with[m
+[7m Manual page cp(1) line 27/159 43% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1m--force[0m)[m
+[7m Manual page cp(1) line 28/159 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 29/159 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--sparse[0m=[4mWHEN[24m[m
+[7m Manual page cp(1) line 30/159 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              control creation of sparse files. See below[m
+[7m Manual page cp(1) line 31/159 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 32/159 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--strip-trailing-slashes[0m[m
+[7m Manual page cp(1) line 33/159 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              remove any trailing slashes from each SOURCE argument[m
+[7m Manual page cp(1) line 34/159 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 35/159 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-s[0m, [1m--symbolic-link[0m[m
+[7m Manual page cp(1) line 36/159 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              make symbolic links instead of copying[m
+[7m Manual page cp(1) line 37/159 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 38/159 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-S[0m, [1m--suffix[0m=[4mSUFFIX[24m[m
+[7m Manual page cp(1) line 39/159 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              override the usual backup suffix[m
+[7m Manual page cp(1) line 40/159 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 41/159 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-t[0m, [1m--target-[0m[1m[7mdirectory[27m[0m=[4m[7mDIRECTORY[27m[24m[m
+[7m Manual page cp(1) line 42/159 52% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              copy all SOURCE arguments into [7mDIRECTORY[27m[m
+[7m Manual page cp(1) line 43/159 52% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 44/159 52% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-T[0m, [1m--no-target-[0m[1m[7mdirectory[27m[0m[m
+[7m Manual page cp(1) line 45/159 54% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              treat DEST as a normal file[m
+[7m Manual page cp(1) line 46/159 54% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 47/159 54% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-u[0m, [1m--update[0m[m
+[7m Manual page cp(1) line 48/159 55% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              copy only when the SOURCE file is newer than the destination file or when  the  destina‐[m
+[7m Manual page cp(1) line 49/159 56% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tion file is missing[m
+[7m Manual page cp(1) line 50/159 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 51/159 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-v[0m, [1m--verbose[0m[m
+[7m Manual page cp(1) line 52/159 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              explain what is being done[m
+[7m Manual page cp(1) line 53/159 58% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 54/159 58% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-x[0m, [1m--one-file-system[0m[m
+[7m Manual page cp(1) line 55/159 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              stay on this file system[m
+[7m Manual page cp(1) line 56/159 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 57/159 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-Z[0m     set SELinux security context of destination file to default type[m
+[7m Manual page cp(1) line 58/159 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 59/159 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--context[0m[=[4mCTX[24m][m
+[7m Manual page cp(1) line 60/159 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              like [1m-Z[0m, or if CTX is specified then set the SELinux or SMACK security context to CTX[m
+[7m Manual page cp(1) line 61/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 62/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--help[0m display this help and exit[m
+[7m Manual page cp(1) line 63/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 64/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--version[0m[m
+[7m Manual page cp(1) line 65/159 64% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              output version information and exit[m
+[7m Manual page cp(1) line 66/159 65% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 67/159 65% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       By  default,  sparse  SOURCE files are detected by a crude heuristic and the corresponding DEST[m
+[7m Manual page cp(1) line 68/159 66% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file is made sparse as  well.   That  is  the  behavior  selected  by  [1m--sparse[0m=[4mauto[24m.   Specify[m
+[7m Manual page cp(1) line 69/159 68% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--sparse[0m=[4malways[24m  to  create  a sparse DEST file whenever the SOURCE file contains a long enough[m
+[7m Manual page cp(1) line 70/159 70% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       sequence of zero bytes.  Use [1m--sparse[0m=[4mnever[24m to inhibit creation of sparse files.[m
+[7m Manual page cp(1) line 71/159 71% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 72/159 71% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       When [1m--reflink[0m[=[4malways[24m] is specified, perform a lightweight copy, where  the  data  blocks  are[m
+[7m Manual page cp(1) line 73/159 73% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       copied  only  when  modified.   If this is not possible the copy fails, or if [1m--reflink[0m=[4mauto[24m is[m
+[7m Manual page cp(1) line 74/159 75% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       specified, fall back to a standard copy.  Use [1m--reflink[0m=[4mnever[24m to ensure a standard copy is per‐[m
+[7m Manual page cp(1) line 75/159 77% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       formed.[m
+[7m Manual page cp(1) line 76/159 77% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 77/159 77% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  backup  suffix is '~', unless set with [1m--suffix[0m or SIMPLE_BACKUP_SUFFIX.  The version con‐[m
+[7m Manual page cp(1) line 78/159 79% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       trol method may be selected via the [1m--backup[0m option or through the VERSION_CONTROL  environment[m
+[7m Manual page cp(1) line 79/159 81% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       variable.  Here are the values:[m
+[7m Manual page cp(1) line 80/159 81% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 81/159 81% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       none, off[m
+[7m Manual page cp(1) line 82/159 81% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              never make backups (even if [1m--backup[0m is given)[m
+[7m Manual page cp(1) line 83/159 82% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page cp(1) line 84/159 82% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       numbered, t[m
+[7m Manual page cp(1) line 85/159 83% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              make numbered backups[m
+[7m Manual page cp(1) line 86/159 83% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              override the usual backup suffix[m
+[47;1H[K[7m Manual page cp(1) line 85/159 83% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-S[0m, [1m--suffix[0m=[4mSUFFIX[24m[m
+[47;1H[K[7m Manual page cp(1) line 84/159 82% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 83/159 82% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              make symbolic links instead of copying[m
+[47;1H[K[7m Manual page cp(1) line 82/159 81% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-s[0m, [1m--symbolic-link[0m[m
+[47;1H[K[7m Manual page cp(1) line 81/159 81% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 80/159 81% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              remove any trailing slashes from each SOURCE argument[m
+[47;1H[K[7m Manual page cp(1) line 79/159 81% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--strip-trailing-slashes[0m[m
+[47;1H[K[7m Manual page cp(1) line 78/159 79% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 77/159 77% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              control creation of sparse files. See below[m
+[47;1H[K[7m Manual page cp(1) line 76/159 77% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--sparse[0m=[4mWHEN[24m[m
+[47;1H[K[7m Manual page cp(1) line 75/159 77% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 74/159 75% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              [1m--force[0m)[m
+[47;1H[K[7m Manual page cp(1) line 73/159 73% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              remove  each  existing  destination  file  before  attempting  to open it (contrast with[m
+[47;1H[K[7m Manual page cp(1) line 72/159 71% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--remove-destination[0m[m
+[47;1H[K[7m Manual page cp(1) line 71/159 71% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 70/159 70% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              control clone/CoW copies. See below[m
+[47;1H[K[7m Manual page cp(1) line 69/159 68% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--reflink[0m[=[4mWHEN[24m][m
+[47;1H[K[7m Manual page cp(1) line 68/159 66% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 67/159 65% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              copy directories recursively[m
+[47;1H[K[7m Manual page cp(1) line 66/159 65% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-R[0m, [1m-r[0m, [1m--recursive[0m[m
+[47;1H[K[7m Manual page cp(1) line 65/159 64% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 64/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              use full source file name under [7mDIRECTORY[27m[m
+[47;1H[K[7m Manual page cp(1) line 63/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--parents[0m[m
+[47;1H[K[7m Manual page cp(1) line 62/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 61/159 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              don't preserve the specified attributes[m
+[47;1H[K[7m Manual page cp(1) line 60/159 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--no-preserve[0m=[4mATTR_LIST[24m[m
+[47;1H[K[7m Manual page cp(1) line 59/159 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 58/159 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              ditional attributes: context, links, xattr, all[m
+[47;1H[K[7m Manual page cp(1) line 57/159 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              preserve the specified attributes (default: mode,ownership,timestamps), if possible  ad‐[m
+[47;1H[K[7m Manual page cp(1) line 56/159 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--preserve[0m[=[4mATTR_LIST[24m][m
+[47;1H[K[7m Manual page cp(1) line 55/159 59% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 54/159 58% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-p[0m     same as [1m--preserve[0m=[4mmode[24m,ownership,timestamps[m
+[47;1H[K[7m Manual page cp(1) line 53/159 58% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[47;1H[K[7m Manual page cp(1) line 52/159 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              never follow symbolic links in SOURCE[m
+[47;1H[K[7m Manual page cp(1) line 51/159 57% (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ cp -r linux/centos/updates/ linux/ubuntu/
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ tree linux
+[01;34mlinux[00m
+├── [01;34mcentos[00m
+│   ├── commands.txt
+│   ├── security.txt
+│   └── [01;34mupdates[00m
+│       └── latest
+└── [01;34mubuntu[00m
+    ├── apt.txt
+    └── [01;34mupdates[00m
+        └── latest
+
+4 directories, 5 files
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ rm -r[Kor[K[Kir linux/ubuntu/updates/
+rm: descend into directory 'linux/ubuntu/updates/'? y
+rm: remove regular empty file 'linux/ubuntu/updates/latest'? y
+rm: remove directory 'linux/ubuntu/updates/'? y
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ rm -ir linux/ubuntu/updates/[C[C[C[C[C[C[C[C[C[C[C[C[C[18Ptree linux
+[01;34mlinux[00m
+├── [01;34mcentos[00m
+│   ├── commands.txt
+│   ├── security.txt
+│   └── [01;34mupdates[00m
+│       └── latest
+└── [01;34mubuntu[00m
+    └── apt.txt
+
+3 directories, 4 files
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ cp -r linux/ubuntu/apt.txt linux/centos/updates/ linux/
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ tree linux
+[01;34mlinux[00m
+├── apt.txt
+├── [01;34mcentos[00m
+│   ├── commands.txt
+│   ├── security.txt
+│   └── [01;34mupdates[00m
+│       └── latest
+├── [01;34mubuntu[00m
+│   └── apt.txt
+└── [01;34mupdates[00m
+    └── latest
+
+4 directories, 6 files
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ rm -r [K[Kir linux/apt.txt linux/updates/
+rm: remove regular empty file 'linux/apt.txt'? y
+rm: descend into directory 'linux/updates/'? y
+rm: remove regular empty file 'linux/updates/latest'? y
+rm: remove directory 'linux/updates/'? y
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ tree
+[01;34m.[00m
+├── bah
+├── [01;34mDesktop[00m
+├── [01;34mDocuments[00m
+│   ├── [01;34mbah[00m
+│   │   ├── [01;32mdisplay-users[00m
+│   │   ├── [01;32mget-user[00m
+│   │   └── users
+│   ├── [01;34mLinux-course[00m
+│   │   ├── [01;34mchallenges[00m
+│   │   │   └── [01;34m01-the-file-system[00m
+│   │   │       ├── challenge
+│   │   │       ├── [01;34mchallenge-01[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-02[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-03[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-04[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-05[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-06[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-07[00m
+│   │   │       │   ├── 199001151030.55
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   ├── t
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-08[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-09[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-10[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-11[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-12[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-13[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-14[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       ├── [01;34mchallenge-15[00m
+│   │   │       │   ├── challenge
+│   │   │       │   ├── script
+│   │   │       │   └── time
+│   │   │       └── [01;34mchallenge-16[00m
+│   │   │           ├── script
+│   │   │           └── time
+│   │   ├── [01;34mcommands[00m
+│   │   │   ├── 01-geeting-help
+│   │   │   ├── 02-keyboard-shortcuts
+│   │   │   ├── 03-bash-history
+│   │   │   ├── 04-root-access
+│   │   │   ├── 05-paths
+│   │   │   ├── 06-ls
+│   │   │   ├── 07-file-types-and-timestamps
+│   │   │   ├── 08-viewing-files
+│   │   │   ├── 09-touch-mkdir-cp-mv-rm-shred
+│   │   │   ├── 10-piping-and-redirection
+│   │   │   ├── 11-locate-find
+│   │   │   ├── 12-grep
+│   │   │   └── 13-vim
+│   │   └── README.md
+│   └── [01;34mpractice[00m
+│       ├── [01;34mbah[00m
+│       │   ├── [01;32mdisplay-users[00m
+│       │   ├── [01;32mget-user[00m
+│       │   └── users
+│       ├── [01;32mfile-creator[00m
+│       ├── inventory
+│       ├── [01;32msearch[00m
+│       └── [01;31musers.tar.gz[00m
+├── [01;34mDownloads[00m
+│   └── [01;35mpexels-snapwire-46024.jpg[00m
+├── [01;34mlinux[00m
+│   ├── [01;34mcentos[00m
+│   │   ├── commands.txt
+│   │   ├── security.txt
+│   │   └── [01;34mupdates[00m
+│   │       └── latest
+│   └── [01;34mubuntu[00m
+│       └── apt.txt
+├── linux.txt
+├── [01;34mMusic[00m
+├── [01;34mPictures[00m
+│   └── [01;35mpexels-snapwire-46024.jpg[00m
+├── [01;34mprojects[00m
+│   ├── c.txt
+│   ├── report.txt
+│   └── todo.txt
+├── [01;34mPublic[00m
+├── script
+├── [01;34msnap[00m
+│   ├── [01;34mcode[00m
+│   │   ├── [01;34m81[00m
+│   │   ├── [01;34m82[00m
+│   │   ├── [01;34mcommon[00m
+│   │   └── [01;36mcurrent[00m -> [01;34m81[00m
+│   └── [01;34msnap-store[00m
+│       ├── [01;34m547[00m
+│       ├── [01;34mcommon[00m
+│       └── [01;36mcurrent[00m -> [01;34m547[00m
+├── [01;34mTemplates[00m
+├── time
+└── [01;34mVideos[00m
+
+46 directories, 87 files
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ree l[K[K[K[K[K[H[2J]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ te[Kree linux
+[01;34mlinux[00m
+├── [01;34mcentos[00m
+│   ├── commands.txt
+│   ├── security.txt
+│   └── [01;34mupdates[00m
+│       └── latest
+└── [01;34mubuntu[00m
+    └── apt.txt
+
+3 directories, 4 files
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ mv linux/centos/ linux/redhat
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ mv linux/centos/ linux/redhat[C[C[C[C[C[C[C[C[C[C[C[C[C[19Ptree linux
+[01;34mlinux[00m
+├── [01;34mredhat[00m
+│   ├── commands.txt
+│   ├── security.txt
+│   └── [01;34mupdates[00m
+│       └── latest
+└── [01;34mubuntu[00m
+    └── apt.txt
+
+3 directories, 4 files
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ mv linux/redhat/ linux/centor
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ mv linux/redhat/ linux/centor[C[C[C[C[C[C[C[C[C[C[C[C[C[19Ptree linuxmv linux/centos/ linux/redhat[K[K[K[K[K[Kcentos
+mv: cannot stat 'linux/centos/': No such file or directory
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ mv linux/centos/ linux/centos[1P[1@r
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ mv linux/centor/ linux/centoss[C[C[C[C[C[C[C[C[C[C[C[C[C[Credhat/ linux/centor[C[C[C[C[C[C[C[C[C[C[C[C[C[19Ptree linux
+[01;34mlinux[00m
+├── [01;34mcentos[00m
+│   ├── commands.txt
+│   ├── security.txt
+│   └── [01;34mupdates[00m
+│       └── latest
+└── [01;34mubuntu[00m
+    └── apt.txt
+
+3 directories, 4 files
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ [H[2J]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ cd linux/centos/security.txt linux/ubuntu/sec.txt
+bash: cd: too many arguments
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ cd linux/centos/security.txt linux/ubuntu/sec.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@p
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ tree linux
+[01;34mlinux[00m
+├── [01;34mcentos[00m
+│   ├── commands.txt
+│   ├── security.txt
+│   └── [01;34mupdates[00m
+│       └── latest
+└── [01;34mubuntu[00m
+    ├── apt.txt
+    └── sec.txt
+
+3 directories, 5 files
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ who >> user[K[K[K[K[K[K users-[K.tct[K[Kxt
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ cat users.txt 
+madeleine :0           2021-11-19 18:24 (:0)
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ shred -vu -n 50 users.txt 
+shred: users.txt: pass 1/50 (random)...
+shred: users.txt: pass 2/50 (f77777)...
+shred: users.txt: pass 3/50 (a22222)...
+shred: users.txt: pass 4/50 (e66666)...
+shred: users.txt: pass 5/50 (c44444)...
+shred: users.txt: pass 6/50 (b33333)...
+shred: users.txt: pass 7/50 (444444)...
+shred: users.txt: pass 8/50 (222222)...
+shred: users.txt: pass 9/50 (000000)...
+shred: users.txt: pass 10/50 (db6db6)...
+shred: users.txt: pass 11/50 (random)...
+shred: users.txt: pass 12/50 (3bbbbb)...
+shred: users.txt: pass 13/50 (dddddd)...
+shred: users.txt: pass 14/50 (c92492)...
+shred: users.txt: pass 15/50 (7fffff)...
+shred: users.txt: pass 16/50 (800000)...
+shred: users.txt: pass 17/50 (249249)...
+shred: users.txt: pass 18/50 (777777)...
+shred: users.txt: pass 19/50 (cccccc)...
+shred: users.txt: pass 20/50 (36db6d)...
+shred: users.txt: pass 21/50 (random)...
+shred: users.txt: pass 22/50 (111111)...
+shred: users.txt: pass 23/50 (492492)...
+shred: users.txt: pass 24/50 (4ccccc)...
+shred: users.txt: pass 25/50 (d55555)...
+shred: users.txt: pass 26/50 (924924)...
+shred: users.txt: pass 27/50 (edb6db)...
+shred: users.txt: pass 28/50 (aaaaaa)...
+shred: users.txt: pass 29/50 (6db6db)...
+shred: users.txt: pass 30/50 (888888)...
+shred: users.txt: pass 31/50 (random)...
+shred: users.txt: pass 32/50 (999999)...
+shred: users.txt: pass 33/50 (5b6db6)...
+shred: users.txt: pass 34/50 (555555)...
+shred: users.txt: pass 35/50 (ffffff)...
+shred: users.txt: pass 36/50 (5ddddd)...
+shred: users.txt: pass 37/50 (a49249)...
+shred: users.txt: pass 38/50 (911111)...
+shred: users.txt: pass 39/50 (088888)...
+shred: users.txt: pass 40/50 (199999)...
+shred: users.txt: pass 41/50 (random)...
+shred: users.txt: pass 42/50 (b6db6d)...
+shred: users.txt: pass 43/50 (124924)...
+shred: users.txt: pass 44/50 (666666)...
+shred: users.txt: pass 45/50 (6eeeee)...
+shred: users.txt: pass 46/50 (bbbbbb)...
+shred: users.txt: pass 47/50 (2aaaaa)...
+shred: users.txt: pass 48/50 (333333)...
+shred: users.txt: pass 49/50 (eeeeee)...
+shred: users.txt: pass 50/50 (random)...
+shred: users.txt: removing
+shred: users.txt: renamed to 000000000
+shred: 000000000: renamed to 00000000
+shred: 00000000: renamed to 0000000
+shred: 0000000: renamed to 000000
+shred: 000000: renamed to 00000
+shred: 00000: renamed to 0000
+shred: 0000: renamed to 000
+shred: 000: renamed to 00
+shred: 00: renamed to 0
+shred: users.txt: removed
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ls
+bah      [0m[01;34mDocuments[0m  [01;34mlinux[0m      [01;34mMusic[0m     [01;34mprojects[0m  script  [01;34mTemplates[0m  [01;34mVideos[0m
+[01;34mDesktop[0m  [01;34mDownloads[0m  linux.txt  [01;34mPictures[0m  [01;34mPublic[0m    [01;34msnap[0m    time
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ [H[2J]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ rm -r linux
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ ls
+bah      [0m[01;34mDocuments[0m  linux.txt  [01;34mPictures[0m  [01;34mPublic[0m  [01;34msnap[0m       time
+[01;34mDesktop[0m  [01;34mDownloads[0m  [01;34mMusic[0m      [01;34mprojects[0m  script  [01;34mTemplates[0m  [01;34mVideos[0m
+]0;madeleine@madeleine-VirtualBox: ~[01;32mmadeleine:[01;34m~[00m$ exit
+
+Script done on 2021-11-19 18:56:51+01:00 [COMMAND_EXIT_CODE="0"]

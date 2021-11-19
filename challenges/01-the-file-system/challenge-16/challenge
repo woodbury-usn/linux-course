@@ -1,0 +1,39 @@
+Challenge #16
+
+1. Install the tree command which is necessary.
+
+2. Using shell commands create the following directory structure.
+
+linux/
+	centos/
+		commands.txt
+		security.txt
+		updates/
+			latest
+	ubuntu/
+		apt.txt
+
+
+3. Considering this directory structure, copy the file called security.txt to the updates directory.
+
+4. Considering the solution from the previous challenge remove the file called security.txt from the directory called updates.
+
+5. Considering the initial directory structure, copy the directory called updates from centos to ubuntu.
+
+6. Considering the solution from the previous challenge, remove the directory called updates from the ubuntu directory.
+
+7. Considering the initial directory structure and using only one command copy the file called apt.txt and the directory called updates to linux directory.
+
+8. Considering the solution from the previous challenge remove the file called apt.txt and the directory called updates from the linux directory interactively (by prompting the user).
+
+9. Considering the initial directory structure, rename the directory called centos to redhat and then back to centos.
+
+10. Considering the initial directory structure, copy the file called security.txt to ubuntu directory as sec.txt
+
+    a) Create a file named users.txt by redirecting the output of the who command.
+
+    b) Display the file contents.
+
+    c) Remove the file in a secure manner by overwriting the file 50 times before removing it.
+
+11. Remove the entire directory structure without prompting.
